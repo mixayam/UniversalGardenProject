@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+			    margin: 0px 0px;
+			    background-color: #E64A19;
+
+			}
+			
+			nav ul {
+			    padding:0;
+			    margin:0;
+			    list-style: none;
+			    position: relative;
+			    }
+
+			nav ul li {
+			    margin: 0px -7px 0 0;
+			    display:inline-block;
+			    background-color: #E64A19;
+			    }
+			
+
+			nav a {
+			    display:block;
+			    padding:0 10px;
+			    color:#FFF;
+			    font-size:15px;
+			    line-height: 20px;
+			    text-decoration:none;
+			}
+			
+
+			nav a:hover {
+			    background-color: #000000;
+		    }
+
+			nav ul ul {
+			    display: none;
+			    position: absolute;
+			    top: 100%;
+			}
+			
+			/* отображаем выпадающий список при наведении */
+			nav ul li:hover > ul {
+			    display:inherit;
+			}
+			
+			/* первый уровень выпадающего списка */
+			nav ul ul li {
+			    min-width:170px;
+			    float:none;
+			    display:list-item;
+			    position: relative;
+			}
+
+			/* второй? уровень выпадающего списка */
+			nav ul ul ul li {
+			    min-width:370px;
+			    float:none;
+			    display:list-item;
+			    position: relative;
+			}
+            
+			nav ul ul ul {
+			    position: absolute;
+			    top:0;
+			    left:100%;
+			}
+			
+
+            
+
+
+    </style>
+</head>
+<body>
+    <nav class="MainMenu">
+        <ul>
+            <li><a href="#">Home</a>
+			 <ul>
+			    <li><a href="#">Preset config</a>
+				  <ul>
+				   <li><a href="#" id = "Menu_Open_file" >Open</a></li>
+				   <li><a href="#" id = "Menu_Edit_file" >Edit</a></li>
+				   </ul>
+				</li>
+				<li><a href="#">Add new</a>
+				  <ul>
+				   <li><a href="#" id= "Menu_AddNew_GH" >Green house (GH) box</a></li>
+				   <li><a href="#" id= "Menu_AddNew_IoT" >IoT Hub cloud side (tmp) -> deeper</a></li>
+				   <li><a href="#" id= "Menu_AddNew_Box_side" >IoT Hub box side (tmp) -> deeper</a></li>
+				   <li><a href="#" id= "Menu_AddNew_Wifi_box" >Wifi box-> deeper</a></li>
+				   <ul> 
+						<li><a href="#" id= "Cloud side" >Setup cloud side</a></li>
+						<li><a href="#" id= "Box side" >Setup box side</a></li>  
+				   </ul>
+                   <li><a href="#" id= "Menu_AddNew_Watering">Watering control box</a>
+				  </ul>
+				</li>
+			</li>
+			 </ul>
+            <li><a href="#">Mode</a>
+                <ul>
+                    <li><a href="#" id= "go_status_GH" >Status GH box</a></li>
+					<li><a href="#" id= "go_status_IoT" >Status IoT thing</a></li>
+					<li><a href="#" id= "MCBoxSide" >MC box side (test)</a></li>
+					<li><a href="#" id= "WiFiBox" >WiFi box work</a></li>
+                    <li><a href="#" id="go_status_Water" >Status watering box</a>
+                        <ul>
+                            <li><a href="#">The third level</a></li>
+                            <li><a href="#">Things</a></li>
+                            <li><a href="#">Some more Stuff</a>
+                            <ul>
+                                <li><a href="#">The fourth level</a></li>
+                            </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+			<li><a href="#" id="gotoChartsWindow" >Charts</a>
+				<ul>
+					<li><a href="#"  id="chartFromFile" >File</a></li>
+				</ul>
+			</li>
+			<li><a href="#" id="MenuChart_FOR_TEST" >Charts test works</a></li>
+            <li><a href="#" id = "MenuAboutWindow">About</a></li>
+            <li><a href="#">Text</a></li>
+            <li><a href="#">Text</a></li>
+        </ul>
+    </nav>
+	
+<div style="padding:0 12px">
+  <h3 id=my_status Here is system status: com port baud rate online or of line and another shit></h3>
+  <p>COM port setup</p>
+</div>
+
+ <table >
+    <tr>
+		<td><select  id="ComNameSelect" >
+			<option value="init">COM port selection</option>
+			</select>
+			<select class="PortNameList" id="COMPortRate">
+				<option>11500</option>
+				<option selected>9600</option>
+			</select>
+	    	<button type="submit" id="ButtonConnectionSetup" disabled >Connection setup</button>
+			<input type="checkbox" id="SendOnEnter"></input> <textarea >Send on Enter</textarea>
+			<input type="checkbox" id="NoScroll"></input> <textarea >Scroll off</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td ><textarea rows="1" cols="128"  id="textToSend"></textarea>
+			<button type="submit" id="SendMyStringButton" disabled>Send</button>
+		</td>
+	</tr>
+	<tr>
+		<td><textarea rows="20" cols="135" id="TextRecieved"></textarea></td>
+	</tr>
+
+  </table>
+   <script src="./index.js"></script>
+   
+</body>
+</html>

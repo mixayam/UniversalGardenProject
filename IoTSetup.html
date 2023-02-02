@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IOT cloud</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        .DeviceID{
+        width:300px;
+        /*height:30px;*/}
+        .FileName{
+        width:300px;
+        /*height:30px;*/}
+        .PropertySelect{
+        width:120px;
+        /*height:30px;*/}
+        .LastUpdateTime{
+        width:300px;
+        /*height:30px;*/}
+    </style>
+</head>
+<body>
+    <h1>Things list request</h1>
+    <form name="ThingFormForm">
+        <input class="FileName" type="textarea" id= "fieldFileName" ></input>
+        <button type="submit" id="SaveFileButton" width=300px >Save file</button></br>
+	    <label>Thing ID </label></br>
+        <select  class="DeviceID" id="deviceID" >
+            <option value='3f3d5531-3505-4401-bab4-451de0373935'>3f3d5531-3505-4401-bab4-451de0373935</option>
+            <option value='cc0658bf-577f-4ba1-80e6-e975221f06cb'>cc0658bf-577f-4ba1-80e6-e975221f06cb</option>
+        </select>
+        <button type="submit" id="IoT_requests">IoT requests</button> 
+        <button type="submit" id="SetFiledsOrder">Set order fields</button>     
+           
+    </form>
+    <script src="./IoTSetup.js"></script>
+</body>
+</html>
