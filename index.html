@@ -1,170 +1,1117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        nav {
-			    margin: 0px 0px;
-			    background-color: #E64A19;
-
-			}
-			
-			nav ul {
-			    padding:0;
-			    margin:0;
-			    list-style: none;
-			    position: relative;
-			    }
-
-			nav ul li {
-			    margin: 0px -7px 0 0;
-			    display:inline-block;
-			    background-color: #E64A19;
-			    }
-			
-
-			nav a {
-			    display:block;
-			    padding:0 10px;
-			    color:#FFF;
-			    font-size:15px;
-			    line-height: 20px;
-			    text-decoration:none;
-			}
-			
-
-			nav a:hover {
-			    background-color: #000000;
-		    }
-
-			nav ul ul {
-			    display: none;
-			    position: absolute;
-			    top: 100%;
-			}
-			
-			/* отображаем выпадающий список при наведении */
-			nav ul li:hover > ul {
-			    display:inherit;
-			}
-			
-			/* первый уровень выпадающего списка */
-			nav ul ul li {
-			    min-width:170px;
-			    float:none;
-			    display:list-item;
-			    position: relative;
-			}
-
-			/* второй? уровень выпадающего списка */
-			nav ul ul ul li {
-			    min-width:370px;
-			    float:none;
-			    display:list-item;
-			    position: relative;
-			}
-            
-			nav ul ul ul {
-			    position: absolute;
-			    top:0;
-			    left:100%;
-			}
-			
-
-            
-
-
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav class="MainMenu">
-        <ul>
-            <li><a href="#">Home</a>
-			 <ul>
-			    <li><a href="#">Preset config</a>
-				  <ul>
-				   <li><a href="#" id = "Menu_Open_file" >Open</a></li>
-				   <li><a href="#" id = "Menu_Edit_file" >Edit</a></li>
-				   </ul>
-				</li>
-				<li><a href="#">Add new</a>
-				  <ul>
-				   <li><a href="#" id= "Menu_AddNew_GH" >Green house (GH) box</a></li>
-				   <li><a href="#" id= "Menu_AddNew_IoT" >IoT Hub cloud side (tmp) -> deeper</a></li>
-				   <li><a href="#" id= "Menu_AddNew_Box_side" >IoT Hub box side (tmp) -> deeper</a></li>
-				   <li><a href="#" id= "Menu_AddNew_Wifi_box" >Wifi box-> deeper</a></li>
-				   <ul> 
-						<li><a href="#" id= "Cloud side" >Setup cloud side</a></li>
-						<li><a href="#" id= "Box side" >Setup box side</a></li>  
-				   </ul>
-                   <li><a href="#" id= "Menu_AddNew_Watering">Watering control box</a>
-				  </ul>
-				</li>
-			</li>
-			 </ul>
-            <li><a href="#">Mode</a>
-                <ul>
-                    <li><a href="#" id= "go_status_GH" >Status GH box</a></li>
-					<li><a href="#" id= "go_status_IoT" >Status IoT thing</a></li>
-					<li><a href="#" id= "MCBoxSide" >MC box side (test)</a></li>
-					<li><a href="#" id= "WiFiBox" >WiFi box work</a></li>
-                    <li><a href="#" id="go_status_Water" >Status watering box</a>
-                        <ul>
-                            <li><a href="#">The third level</a></li>
-                            <li><a href="#">Things</a></li>
-                            <li><a href="#">Some more Stuff</a>
-                            <ul>
-                                <li><a href="#">The fourth level</a></li>
-                            </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-			<li><a href="#" id="gotoChartsWindow" >Charts</a>
-				<ul>
-					<li><a href="#"  id="chartFromFile" >File</a></li>
-				</ul>
-			</li>
-			<li><a href="#" id="MenuChart_FOR_TEST" >Charts test works</a></li>
-            <li><a href="#" id = "MenuAboutWindow">About</a></li>
-            <li><a href="#">Text</a></li>
-            <li><a href="#">Text</a></li>
-        </ul>
-    </nav>
-	
-<div style="padding:0 12px">
-  <h3 id=my_status Here is system status: com port baud rate online or of line and another shit></h3>
-  <p>COM port setup</p>
-</div>
 
- <table >
-    <tr>
-		<td><select  id="ComNameSelect" >
-			<option value="init">COM port selection</option>
-			</select>
-			<select class="PortNameList" id="COMPortRate">
-				<option>11500</option>
-				<option selected>9600</option>
-			</select>
-	    	<button type="submit" id="ButtonConnectionSetup" disabled >Connection setup</button>
-			<input type="checkbox" id="SendOnEnter"></input> <textarea >Send on Enter</textarea>
-			<input type="checkbox" id="NoScroll"></input> <textarea >Scroll off</textarea>
-		</td>
-	</tr>
-	<tr>
-		<td ><textarea rows="1" cols="128"  id="textToSend"></textarea>
-			<button type="submit" id="SendMyStringButton" disabled>Send</button>
-		</td>
-	</tr>
-	<tr>
-		<td><textarea rows="20" cols="135" id="TextRecieved"></textarea></td>
-	</tr>
 
-  </table>
-   <script src="./index.js"></script>
-   
+<div class="container">
+
+	<!-- Tabs Detail -->
+	<div class="tabs">
+		<span data-tab-value="#tab_1">MAIN</span>
+		<span data-tab-value="#tab_2">TEST</span>
+		<span data-tab-value="#tab_4">SETUP</span>
+		<span data-tab-value="#tab_5">DB</span>
+		<span data-tab-value="#tab_6">DB Report</span>
+		<span data-tab-value="#tab_7">ROUTES</span>
+		<span data-tab-value="#tab_8">Test Maket</span>
+		<span data-tab-value="#tab_9">Maket operator</span>
+		<span data-tab-value="#tab_10">Mega test</span>
+		<!-- <span data-tab-value="#tab_11">Service win</span> -->
+	</div>
+
+	<!-- Tab content -->
+	<div class="tab-content">
+		<div class="tabs__tab active" id="tab_1" data-tab-info><!--active-->
+			<p></p>
+			<button type="submit" id="closeSerialConnectionBut" hidden>Close connection</button>
+			<div class="dataBaseWorksMain">
+				<textarea id="carDBIDMain" rows="1" cols="15" readonly>ID: </textarea>
+				<textarea id="carDBNameMain" rows="1" cols="15" readonly>Name: </textarea>
+				<textarea id="carDBPlateMain" rows="1" cols="15" readonly>Plate: </textarea>
+			</div>
+			<div class="ConnectionSetup">
+				<table>
+					<tr>
+						<td><select id="ComNameSelect">
+								<option value="init">COM port selection</option>
+							</select>
+							<select class="PortNameList" id="COMPortRate">
+								<option>11500</option>
+								<option selected>9600</option>
+							</select>
+							<button type="submit" id="ButtonConnectionSetup" disabled>Connection setup</button>
+							<input type="checkbox" id="monitorScroll" /></input> 
+							<textarea rows="1" cols="8">Scroll on</textarea>
+						</td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="20" id="textToSend"></textarea>
+							<button type="submit" id="SendMyStringButton" disabled>Send</button>
+							<textarea rows="1" cols="19" id="voltageInfMainTxt"></textarea>
+							<button type="submit" id="MAINclearOutputBut">Clear output</button>
+						</td>
+					</tr>
+					<tr>
+						<td><textarea rows="20" cols="65" id="TextRecieved"></textarea></td>
+					</tr>
+				</table>
+				<button type="submit" id="initializeBut" disabled>INITIALIZE</button>
+				<button type="submit" id="connectionTestBut" disabled>TEST</button>
+				<button type="submit" id="reqBut" hidden>STOP TRANS</button>
+				<button type="submit" id="sqlGetDataBut" hidden>GET</button>
+				<button type="submit" id="lookForCarNew" hidden>LOOK FOR</button>
+				<button type="submit" id="TestCarNew" hidden>Test car</button>
+				<button type="submit" id="getPromiseBut">GET</button>
+			</div>
+			<div class="modeChoiceBlock">
+				<select id="modeChooseSLCT">
+					<option value="TRLTBoard">Traffic lights board</option>
+					<option value="arduino">Arduino</option>
+				</select>
+				<select id="portChooseSLCT" hidden>
+					<option value="0">Port 0</option>
+					<option value="1">Port 1</option>
+					<option value="2">Port 2</option>
+					<option value="3">Port 3</option>
+					<option value="4">Port 4</option>
+				</select>
+				<button type="submit" id="lockBut">LOCK</button>
+			</div>
+
+			<div id="specialCommsBlock" style="display: none;">
+				<button id="CLOSEspecialCommsBlock">X</button>
+			</div>
+		</div>
+		
+		<div class="tabs__tab" id="tab_2" data-tab-info>
+			<div class="testLights">
+				<button type="submit" id="testLedButON">BACK LED ON</button>
+				<button type="submit" id="testLedButOFF">BACK LED OFF</button>
+				<button type="submit" id="testBlinkerButON">BLINKERS ON</button>
+				<button type="submit" id="testBlinkerButOFF">BLINKERS OFF</button>
+				<button type="submit" id="testStopsButON">STOP LIGHTS ON</button>
+				<button type="submit" id="testStopsButOFF">STOP LIGHTS OFF</button>
+				<button type="submit" id="testMotorButON">MOTOR ON</button>
+				<textarea rows="1" cols="5" id="motorONParas">128</textarea>
+				<button type="submit" id="testMotorButOFF">MOTOR OFF</button>
+				<button type="submit" id="testDriveButON">DRIVE ON</button>
+				<button type="submit" id="testDriveButOFF">DRIVE OFF</button>
+				<p></p>
+				<button type="submit" id="calibrationBut">CALIBRATE</button>
+			</div>
+			<div class="commandGenerator" hidden>
+				<p> </p>
+				<div class="noArgComms">
+					<select id="codeNameCH">
+						<option value="data">data</option>
+						<option value="data">data</option>
+					</select>
+					<select id="adressCH">
+						<option value="85">Global (85)</option>
+
+						<option value="  ">Other...</option>
+					</select>
+					<select id="commandTypeCH">
+						<option value=" ">Choose command WITHOUT ARGS</option>
+						<option value="2">Mirroring(2)</option>
+						<option value="10">Power(10)</option>
+						<option value="11">Calibrate(11)</option>
+						<option value="12">Поддержание скорости в %(12)</option>
+						<option value="13">STOP(13)</option>
+						<option value="14">Поддержание скорости в %(14)</option>
+						<option value="15">STOP and look for magnet(15)</option>
+						<option value="16">Some sort of STOP(16)</option>
+						<option value="101">Get engine power(101)</option>
+						<option value="102">Get voltage(102)</option>
+						<option value="103">Get message word(103)</option>
+						<option value="104">Get myPowerKeeping(104)</option>
+						<option value="200">RESET</option>
+						<option value="210">Заготовка reset, начало движения(210)</option>
+						<option value="30">Сохранение параметров EEPROM(30)</option>
+						<option value="39">Download defaults(39)</option>
+					</select>
+				</div>
+				<div class="commsWArgs">
+					<select id="commandTypeCHWArgs">
+						<option value=" ">Choose command WITH ARGS</option>
+						<option value="2">Mirroring(2)</option>
+						<option value="32">Commands to send rarams(32)</option>
+						<option value="11">Calibrate(11)</option>
+						<option value="12">Поддержание скорости в %(12)</option>
+						<option value="13">STOP(13)</option>
+						<option value="14">Поддержание скорости в %(14)</option>
+						<option value="15">STOP and look for magnet(15)</option>
+						<option value="16">Some sort of STOP(16)</option>
+						<option value="101">Get engine power(101)</option>
+						<option value="102">Get voltage(102)</option>
+						<option value="103">Get message word(103)</option>
+						<option value="104">Get myPowerKeeping(104)</option>
+						<option value="200">RESET</option>
+						<option value="210">Заготовка reset, начало движения(210)</option>
+						<option value="30">Сохранение параметров EEPROM(30)</option>
+						<option value="39">Download defaults(39)</option>
+					</select>
+					<select id="commandArgCH">
+						<option value=" ">Choose argument</option>
+						<option value="123">123</option>
+						<option value="1">current unitAddress</option>
+						<option value="101">stored unitAddress</option>
+						<option value="2">current defRPMPer</option>
+						<option value="21">stored defRPMPer</option>
+						<option value="3">current minPower</option>
+						<option value="31">stored minPower</option>
+						<option value="4">current rpmMin</option>
+						<option value="41">stored rpmMin</option>
+						<option value="5">current rpmMax</option>
+						<option value="51">stored rpmMax</option>
+						<option value="6">current myRaizeDivider</option>
+						<option value="61">stored myRaizeDivider</option>
+						<option value="7">current myReduceDivider</option>
+						<option value="71">stored myReduceDivider</option>
+						<option value="8">current systemConfig</option>
+						<option value="81">stored systemConfig</option>
+						<option value="9">current waitingAfterLight</option>
+						<option value="91">stored waitingAfterLight</option>
+						<option value="10">current ReducedSpeedTime</option>
+						<option value="110">stored ReducedSpeedTime</option>
+						<option value="11">current voltageTreshold</option>
+						<option value="111">stored voltageTreshold</option>
+						<option value="12">current noRPMPower</option>
+						<option value="112">stored noRPMPower</option>
+						<option value="13">current unitID</option>
+						<option value="113">stored unitID</option>
+					</select>
+					<textarea cols="50" rows="1" id="userArgsTxt"></textarea>
+					<button type="submit" id="sendGenCommandBut">Send</button>
+				</div>
+			</div>
+			<div class="monitorMainCheck">
+				<textarea rows="1" cols="30" id="TxtToSendTest"></textarea>
+				<button type="submit" id="TxtSendTestBut">Send</button>
+				<input type="checkbox" id="ScrollTxtToSendTestCheck" >SCROLL</input>
+				<textarea rows="1" cols="19" id="voltageInfTextTxt"></textarea>
+				<textarea rows="13" cols="65" id="TxtRecievedTest"></textarea>
+				<button type="submit" id="TESTclearOutputBut">Clear output</button>
+			</div>
+		</div>
+
+
+		<div class="tabs__tab " id="tab_4" data-tab-info>
+			<p></p>
+
+			<div class="parcedValuesGet">
+				<h3> | Values INFO | Values GET | Values STORED | Values SEND</h3>
+
+				<textarea rows="1" cols="20" class="0" id="parcedValuesGetUnitAddrA" readonly hidden></textarea>
+				<textarea rows="1" cols="20" class="0" id="parcedValuesSavedUnitAddrA" readonly hidden></textarea>
+				<textarea rows="1" cols="20" readonly>unit Address(1):</textarea>
+				<textarea rows="1" cols="20" class="0" id="parcedValuesGetUnitAddr" readonly></textarea>
+				<textarea rows="1" cols="20" class="0" id="parcedValuesSavedUnitAddr" readonly></textarea>
+				<textarea rows="1" cols="20" class="0" id="parcedValuesSendUnitAddr"></textarea>
+				<textarea rows="1" cols="20" readonly>default power(2)</textarea>
+				<textarea rows="1" cols="20" class="1" id="parcedValuesGetdefPWR" readonly></textarea>
+				<textarea rows="1" cols="20" class="1" id="parcedValuesSaveddefPWR" readonly></textarea>
+				<textarea rows="1" cols="20" class="1" id="parcedValuesSenddefPWR"></textarea>
+				<textarea rows="1" cols="20" readonly>min power(3)</textarea>
+				<textarea rows="1" cols="20" class="2" id="parcedValuesGetminPWR" readonly></textarea>
+				<textarea rows="1" cols="20" class="2" id="parcedValuesSavedminPWR" readonly></textarea>
+				<textarea rows="1" cols="20" class="2" id="parcedValuesSendminPWR"></textarea>
+				<textarea rows="1" cols="20" readonly>min RPM(4)</textarea>
+				<textarea rows="1" cols="20" class="3" id="parcedValuesGetMINRPM" readonly></textarea>
+				<textarea rows="1" cols="20" class="3" id="parcedValuesSavedMINRPM" readonly></textarea>
+				<textarea rows="1" cols="20" class="3" id="parcedValuesSendMINRPM"></textarea>
+				<textarea rows="1" cols="20" readonly>max RPM(5)</textarea>
+				<textarea rows="1" cols="20" class="4" id="parcedValuesGetMAXRPM" readonly></textarea>
+				<textarea rows="1" cols="20" class="4" id="parcedValuesSavedMAXRPM" readonly></textarea>
+				<textarea rows="1" cols="20" class="4" id="parcedValuesSendMAXRPM"></textarea>
+				<textarea rows="1" cols="20" readonly>Divider(6)</textarea>
+				<textarea rows="1" cols="20" class="5" id="parcedValuesGetRaizedDivider" readonly></textarea>
+				<textarea rows="1" cols="20" class="5" id="parcedValuesSavedRaizedDivider" readonly></textarea>
+				<textarea rows="1" cols="20" class="5" id="parcedValuesSendRaizedDivider"></textarea>
+				<textarea rows="1" cols="20" readonly>Reduce divider(7):</textarea>
+				<textarea rows="1" cols="20" class="6" id="parcedValuesGetReduceDivider" readonly></textarea>
+				<textarea rows="1" cols="20" class="6" id="parcedValuesSavedReduceDivider" readonly></textarea>
+				<textarea rows="1" cols="20" class="6" id="parcedValuesSendReduceDivider"></textarea>
+				<textarea rows="1" cols="20" readonly>Config(8):</textarea>
+				<textarea rows="1" cols="20" class="7" id="parcedValuesGetConfig" readonly></textarea>
+				<textarea rows="1" cols="20" class="7" id="parcedValuesSavedConfig" readonly></textarea>
+				<textarea rows="1" cols="20" class="7" id="parcedValuesSendConfig"></textarea>
+				<textarea rows="1" cols="20" readonly>Wait delay(9):</textarea>
+				<textarea rows="1" cols="20" class="8" id="parcedValuesGetWaitDelay" readonly></textarea>
+				<textarea rows="1" cols="20" class="8" id="parcedValuesSavedWaitDelay" readonly></textarea>
+				<textarea rows="1" cols="20" class="8" id="parcedValuesSendWaitDelay"></textarea>
+				<textarea rows="1" cols="20" readonly>Slow moving delay(10):</textarea>
+				<textarea rows="1" cols="20" class="9" id="parcedValuesGetSlowMovingDelay" readonly></textarea>
+				<textarea rows="1" cols="20" class="9" id="parcedValuesSavedSlowMovingDelay" readonly></textarea>
+				<textarea rows="1" cols="20" class="9" id="parcedValuesSendSlowMovingDelay"></textarea>
+				<textarea rows="1" cols="20" readonly>Volt thress(11):</textarea>
+				<textarea rows="1" cols="20" class="10" id="parcedValuesGetVoltThress" readonly></textarea>
+				<textarea rows="1" cols="20" class="10" id="parcedValuesSavedVoltThress" readonly></textarea>
+				<textarea rows="1" cols="20" class="10" id="parcedValuesSendVoltThress"></textarea>
+				<textarea rows="1" cols="20" readonly>no RPm power (12):</textarea>
+				<textarea rows="1" cols="20" class="11" id="parcedValuesGetNoRPMPWR" readonly></textarea>
+				<textarea rows="1" cols="20" class="11" id="parcedValuesSavedNoRPMPWR" readonly></textarea>
+				<textarea rows="1" cols="20" class="11" id="parcedValuesSendNoRPMPWR"></textarea>
+				<textarea rows="1" cols="20" readonly>unit ID (13):</textarea>
+				<textarea rows="1" cols="20" class="12" id="parcedValuesGetunitID" readonly></textarea>
+				<textarea rows="1" cols="20" class="12" id="parcedValuesSavedunitID" readonly></textarea>
+				<textarea rows="1" cols="20" class="12" id="parcedValuesSendunitID"></textarea>
+				<textarea rows="1" cols="20" readonly>soft(X):</textarea>
+				<textarea rows="1" cols="20" class="13" id="parcedValuesGetSoftInfo" readonly></textarea>
+				<textarea rows="1" cols="20" class="13" id="parcedValuesSavedSoftInfo" readonly></textarea>
+				<textarea rows="1" cols="20" class="13" id="parcedValuesSendSoftInfo" readonly></textarea>
+				<textarea rows="1" cols="20" readonly>pins(X):</textarea>
+				<textarea rows="1" cols="20" class="14" id="parcedValuesGetPinsInfo" readonly></textarea>
+				<textarea rows="1" cols="20" class="14" id="parcedValuesSavedPinsInfo" readonly></textarea>
+				<textarea rows="1" cols="20" class="14" id="parcedValuesSendPinsInfo" readonly></textarea>
+				<textarea rows="1" cols="20" readonly>Init (X):</textarea>
+				<textarea rows="1" cols="20" class="15" id="parcedValuesGetInitInfo" readonly></textarea>
+				<textarea rows="1" cols="20" class="15" id="parcedValuesSavedInitInfo" readonly></textarea>
+				<textarea rows="1" cols="20" class="15" id="parcedValuesSendInitInfo" readonly></textarea>
+				<button type="submit" id="dataClearBut">Clear</button>
+			</div>
+			<div class="controls">
+				<button type="submit" id="getCurrentValuesBut">Get current</button>
+				<button type="submit" id="getStoredValuesBut">Get stored</button>
+				<button type="submit" id="sendParcedValues">Send</button>
+				<button type="submit" id="savedParcedValues" hidden>Save</button>
+				<button type="submit" id="carResetBut">RE</button>
+				<button type="submit" id="carReset210But">SET</button>
+				<button type="submit" id="getDefaultDataBut">Default</button>
+			</div>
+
+			<div class="systemConfig">
+				<table>
+					<tr>
+						<td><textarea rows="2" cols="40"
+								style=" border-top-left-radius: 10px;"> движение при достижении напряжения питания;</textarea>
+						</td>
+						<td><input type="checkbox" id="moveVoltageProgGetCheck" disabled></td>
+						<td><input type="checkbox" id="moveVoltageProgStoredCheck" disabled></td>
+						<td><input type="checkbox" id="moveVoltageUserCheck"></td>
+					</tr>
+					<tr>
+						<td><textarea rows="2" cols="40"
+								readonly>включена старая система связи (0) включена новая система связи</textarea></td>
+						<td><input type="checkbox" id="connectionSystemProgGetCheck" disabled></td>
+						<td><input type="checkbox" id="connectionSystemProgStoredCheck" disabled></td>
+						<td><input type="checkbox" id="connectionSystemUserCheck"></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="40" readonly>постоянно включен задний светодиод</textarea></td>
+						<td><input type="checkbox" id="backLEDAlwEnabledProgGetCheck" disabled></td>
+						<td><input type="checkbox" id="backLEDAlwEnabledProgStoredCheck" disabled></td>
+						<td><input type="checkbox" id="backLEDAlwEnabledUserCheck"></td>
+					</tr>
+					<tr>
+						<td><textarea rows="2" cols="40"
+								readonly>режим энергосбережения; (0) нет режима энергосбережения</textarea></td>
+						<td><input type="checkbox" id="powerSavingModeProgGetCheck" disabled></td>
+						<td><input type="checkbox" id="powerSavingModeProgStoredCheck" disabled></td>
+						<td><input type="checkbox" id="powerSavingModeUserCheck"></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="40" readonly>кормовой LED мигает</textarea></td>
+						<td><input type="checkbox" id="backLEDBlinksProgGetCheck" disabled></td>
+						<td><input type="checkbox" id="backLEDBlinksProgStoredCheck" disabled></td>
+						<td><input type="checkbox" id="backLEDBlinksUserCheck"></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="40" readonly> "Режим висения на фонарях" </textarea></td>
+						<td><input type="checkbox" id="trafficLightsModeProgGetCheck" disabled></td>
+						<td><input type="checkbox" id="trafficLightsModeProgStoredCheck" disabled></td>
+						<td><input type="checkbox" id="trafficLightsModeUserCheck"></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="40" readonly> "Режим выхода из аварии" </textarea></td>
+						<td><input type="checkbox" id="crashAvoidProgGetCheck" disabled></td>
+						<td><input type="checkbox" id="crashAvoidProgStoredCheck" disabled></td>
+						<td><input type="checkbox" id="crashAvoidUserCheck"></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="40" readonly> "Reply reaction" </textarea></td>
+						<td><input type="checkbox" id="replyReactionProgGetCheck" disabled></td>
+						<td><input type="checkbox" id="replyReactionProgStoredCheck" disabled></td>
+						<td><input type="checkbox" id="replyReactionUserCheck"></td>
+					</tr>
+				</table>
+				<button type="submit" id="statusAcceptBut">Generate config</button>
+			</div>
+
+			<div class="parcedConfigWord">
+				<button type="submit" id="getMsgWrdBut">Get message word</button>
+				<button type="submit" id="parceMsgWD" disabled>Parse message word</button>
+				<p> </p>
+				<table class="parcedTBL">
+					<tr>
+						<td><textarea rows="1" cols="57" id="ByteParced_0" readonly></textarea></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="57" id="ByteParced_1" readonly></textarea></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="57" id="ByteParced_2" readonly></textarea></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="57" id="ByteParced_3" readonly></textarea></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="57" id="ByteParced_4" readonly></textarea></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="57" id="ByteParced_5" readonly></textarea></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="57" id="ByteParced_6" readonly></textarea></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="57" id="ByteParced_7" readonly></textarea></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="57" id="ByteParced_8" readonly></textarea></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="57" id="ByteParced_9" readonly></textarea></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="57" id="ByteParced_10" readonly></textarea></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="57" id="ByteParced_11" readonly></textarea></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="57" id="ByteParced_12" readonly></textarea></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="57" id="ByteParced_13" readonly></textarea></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="57" id="ByteParced_14" readonly></textarea></td>
+					</tr>
+					<tr>
+						<td><textarea rows="1" cols="57" id="ByteParced_15" readonly></textarea></td>
+					</tr>
+				</table>
+			</div>
+			<div class="monitorMainCheckSSetup">
+				<textarea rows="1" cols="30" id="TxtToSendSSetup"></textarea>
+				<button type="submit" id="TxtSendSSetupBut">Send</button>
+
+				<input type="checkbox" id="ScrollTxtToSendSSetupCheck" >SCROLL</input>
+				<!--<textarea rows="1" cols="19" id="voltageInfSSetupTxt"></textarea>-->
+				<textarea rows="13" cols="65" id="TxtRecievedSSetup"></textarea>
+				<button type="submit" id="SETUPclearOutput">Clear output</button>
+			</div>
+		</div>
+		<div class="tabs__tab " id="tab_5" data-tab-info>
+			<div class="dataBaseWorks">
+				<textarea id="carDBID" rows="1" cols="15" readonly>ID: </textarea>
+				<textarea id="carDBName" rows="1" cols="15" readonly>Name: </textarea>
+				<textarea id="carDBPlate" rows="1" cols="15" readonly>Plate: </textarea>
+			</div>
+
+			<div class="DBInsertDataDiagnostic">
+				<textarea rows="1" cols="20" class="0" id="DBIparcedValuesSavedUnitAddrA" readonly hidden></textarea>
+				<textarea rows="1" cols="20" readonly style="border-top-left-radius: 10px;">unit Address(1):</textarea>
+				<textarea rows="1" cols="20" class="0" id="DBIparcedValuesSavedUnitAddr"></textarea>
+				<textarea rows="1" cols="20" readonly>default power(2)</textarea>
+				<textarea rows="1" cols="20" class="1" id="DBIparcedValuesSaveddefPWR"></textarea>
+				<textarea rows="1" cols="20" readonly>min power(3)</textarea>
+				<textarea rows="1" cols="20" class="2" id="DBIparcedValuesSavedminPWR"></textarea>
+				<textarea rows="1" cols="20" readonly>min RPM(4)</textarea>
+				<textarea rows="1" cols="20" class="3" id="DBIparcedValuesSavedMINRPM"></textarea>
+				<textarea rows="1" cols="20" readonly>max RPM(5)</textarea>
+				<textarea rows="1" cols="20" class="4" id="DBIparcedValuesSavedMAXRPM"></textarea>
+				<textarea rows="1" cols="20" readonly>Divider(6)</textarea>
+				<textarea rows="1" cols="20" class="5" id="DBIparcedValuesSavedRaizedDivider"></textarea>
+				<textarea rows="1" cols="20" readonly>Reduce divider(7):</textarea>
+				<textarea rows="1" cols="20" class="6" id="DBIparcedValuesSavedReduceDivider"></textarea>
+				<textarea rows="1" cols="20" readonly>Config(8):</textarea>
+				<textarea rows="1" cols="20" class="7" id="DBIparcedValuesSavedConfig"></textarea>
+				<textarea rows="1" cols="20" readonly>Wait delay(9):</textarea>
+				<textarea rows="1" cols="20" class="8" id="DBIparcedValuesSavedWaitDelay"></textarea>
+				<textarea rows="1" cols="20" readonly>Slow moving delay(10):</textarea>
+				<textarea rows="1" cols="20" class="9" id="DBIparcedValuesSavedSlowMovingDelay"></textarea>
+				<textarea rows="1" cols="20" readonly>Volt thress(11):</textarea>
+				<textarea rows="1" cols="20" class="10" id="DBIparcedValuesSavedVoltThress"></textarea>
+				<textarea rows="1" cols="20" readonly>no RPm power (12):</textarea>
+				<textarea rows="1" cols="20" class="11" id="DBIparcedValuesSavedNoRPMPWR"></textarea>
+				<textarea rows="1" cols="20" readonly>unit ID (13):</textarea>
+				<textarea rows="1" cols="20" class="12" id="DBIparcedValuesSavedunitID"></textarea>
+				<textarea rows="1" cols="20" readonly>soft(X):</textarea>
+				<textarea rows="1" cols="20" class="13" id="DBIparcedValuesSavedSoftInfo"></textarea>
+				<textarea rows="1" cols="20" readonly>pins(X):</textarea>
+				<textarea rows="1" cols="20" class="14" id="DBIparcedValuesSavedPinsInfo"></textarea>
+				<button type="submit" id="DBIGetStoredData">Get stored</button>
+				<textarea rows="2" cols="25" id="DBIcommentTxt" placeholder="Leave a comment..."></textarea>
+				<button type="submit" id="DBISaveStoredData">Save</button>
+			</div>
+
+
+			<button type="submit" id="addDataToCarDBBut">Add car</button>
+			<div class="DBInteractor" style=" display: none;" id="DBInteractor">
+				<textarea id="enterCarDBID" rows="1" cols="15" placeholder="Enter ID: "></textarea>
+				<textarea id="enterCarDBName" rows="1" cols="15" placeholder="Enter Name: "></textarea>
+				<textarea id="enterCarDBColor" rows="1" cols="15" placeholder="Enter color: "></textarea>
+				<textarea id="enterCarDBPlate" rows="1" cols="15" placeholder="Enter plate: "></textarea>
+				<button type="submit" id="enterCarDataApplyBut">Apply</button>
+				<button type="submit" id="enterCarDataCancelCloseBut">X</button>
+			</div>
+
+
+		</div>
+		<div class="tabs__tab " id="tab_6" data-tab-info>
+			<div class="dataBaseWorksDBI">
+				<textarea id="carDBIDDBI" rows="1" cols="15" readonly>ID: </textarea>
+				<textarea id="carDBNameDBI" rows="1" cols="15" readonly>Name: </textarea>
+				<textarea id="carDBPlateDBI" rows="1" cols="15" readonly>Plate: </textarea>
+			</div>
+
+			<div id="carDBInfoEX" style="display: none;">
+				<textarea id="carDBRExName" rows="1" cols="15" readonly>Name:</textarea>
+				<textarea id="carDBRExPlate" rows="1" cols="15" readonly>Plate:</textarea>
+			</div>
+
+			<div class="DBIOperator">
+				<textarea id="enterAccessCarID" rows="1" cols="15" placeholder="ID: "></textarea>
+				<textarea id="enterAccessYear" rows="1" cols="15" placeholder="Year: "></textarea>
+				<textarea id="enterAccessMonth" rows="1" cols="15" placeholder="Month: "></textarea>
+				<textarea id="enterAccessDay" rows="1" cols="15" placeholder="Day: "></textarea>
+				<textarea id="enterAccessHour" rows="1" cols="15" placeholder="Hour: "></textarea>
+				<select id="DBIParasFindSelect">
+					<option value="0">__________________</option>
+					<option value="UNITaddress">unit Address</option>
+					<option value="DEFAULTpower">default power</option>
+					<option value="MINpower">min power</option>
+					<option value="MINrpm">min RPM</option>
+					<option value="MAXrpm">max RPM</option>
+					<option value="DIVIDER">Divider</option>
+					<option value="REDUCEdivider">Reduce divider</option>
+					<option value="CONFIG">Config</option>
+					<option value="WAITdelay">Wait delay</option>
+					<option value="SLOWmovingDelay">Slow moving delay</option>
+					<option value="VOLTthress">Volt thress</option>
+					<option value="N0rpmPower">no RPm power</option>
+					<option value="COMMENT">Comment </option>
+				</select>   
+				<textarea id="enterFindValue" rows="1" cols="15" placeholder="Value: "></textarea>
+				<button type="submit" id="findAllDATEInDB">Find</button>
+				<p></p>
+				<textarea id="enterDeleteCarID" rows="1" cols="15" placeholder="ID: "></textarea>
+				<textarea id="enterDeleteYear" rows="1" cols="15" placeholder="Year: "></textarea>
+				<textarea id="enterDeleteMonth" rows="1" cols="15" placeholder="Month: "></textarea>
+				<textarea id="enterDeleteDay" rows="1" cols="15" placeholder="Day: "></textarea>
+				<textarea id="enterDeleteHour" rows="1" cols="15" placeholder="Hour: "></textarea>
+				<textarea id="enterDeleteMinute" rows="1" cols="15" placeholder="Minute: "></textarea>
+				<textarea id="enterDeleteSecond" rows="1" cols="15" placeholder="Second: "></textarea>
+				<button type="submit" id="deleteDBIData">Delete</button>
+				<p></p>
+				<textarea id="enterUpdateCarID" rows="1" cols="15" placeholder="ID: "></textarea>
+				<textarea id="enterUpdateYear" rows="1" cols="15" placeholder="Year: "></textarea>
+				<select id="enterUpdateMonth"></select>
+				<select id="enterUpdateDay"></select>
+				<select id="enterUpdateHour"></select>
+				<select id="enterUpdateMinute"></select>
+				<select id="enterUpdateSecond"></select>
+				<select id="DBIParasChehange">
+					<option value="0">_________</option>
+					<option value="UNITaddress">unit Address</option>
+					<option value="DEFAULTpower">default power</option>
+					<option value="MINpower">min power</option>
+					<option value="MINrpm">min RPM</option>
+					<option value="MAXrpm">max RPM</option>
+					<option value="DIVIDER">Divider</option>
+					<option value="REDUCEdivider">Reduce divider</option>
+					<option value="CONFIG">Config</option>
+					<option value="WAITdelay">Wait delay</option>
+					<option value="SLOWmovingDelay">Slow moving delay</option>
+					<option value="VOLTthress">Volt thress</option>
+					<option value="N0rpmPower">no RPm power</option>
+					<option value="ID">unit ID </option>
+					<option value="COMMENT">Comment </option>
+				</select>
+				<textarea id="enterUpdateValue" rows="1" cols="15" placeholder="Value: "></textarea>
+				<button type="submit" id="updateStringInDBBut">Update</button>
+
+				<textarea id="accessCarByNameForRestore" rows="1" cols="15" placeholder="Name:"></textarea>
+			
+				<select id="accessCarByIDForRestore"></select>
+				<select id="accessCarByYearForRestore"></select>
+				<select id="accessCarByMonthForRestore"></select>
+				<select id="accessCarByDayForRestore"></select>
+				<select id="accessCarByHourForRestore"></select>
+				<select id="accessCarByMinForRestore"></select>
+				<select id="accessCarBySecForRestore"></select>
+				<button type="submit" id="restoreDataBut" >Restore data</button>
+			</div>
+			<table id="display_json_data" border="2"></table>
+		</div>
+		<div class="tabs__tab " id="tab_7" data-tab-info>
+			<div class="dataBaseWorksDBR">
+				<textarea id="carDBIDDBR" rows="1" cols="15" readonly>ID: </textarea>
+				<textarea id="carDBNameDBR" rows="1" cols="15" readonly>Name: </textarea>
+				<textarea id="carDBPlateDBR" rows="1" cols="15" readonly>Plate: </textarea>
+			</div>
+			<div class="DBRInteractor">
+				<button type="submit" id="openAppointBlockBut" >Appoint car to route</button>
+				<div class="appointCarToRoute" style=" display: none;" id="appointCarToRoute">
+					<select id="selectCarRoute">
+						<option value="МГ-1">МГ-1</option>
+						<option value="СПБ-малый круг">СПБ-малый круг</option>
+						<option value="Крым-Сочи">Крым-Сочи</option>
+						<option value="Строгино">Строгино</option>
+					</select>
+					<textarea id="appointCarID" rows="1" cols="15" placeholder="ID:"></textarea>
+					<textarea id="appointCarPlate" rows="1" cols="15" placeholder="Plate:"></textarea>
+					<button type="submit" id="appointCarToRouteBut">Appoint</button>
+					<button type="submit" id="cancelCarToRouteBut">X</button>
+				</div>
+
+				
+				<button type="submit" id="openExtractorBlockBut" >Observe data</button>
+				<div class="DBRExtractor" id="DBRExtractor" style=" display:none;" >
+					<select id="selectCarRouteExtractor"></select>
+					<select id="extractorCarID"></select>
+					<textarea id="extractorYear" rows="1" cols="15" placeholder="Year:"></textarea>
+					<textarea id="extractorMonth" rows="1" cols="15" placeholder="Month:"></textarea>
+					<textarea id="extractorDay" rows="1" cols="15" placeholder="Day:"></textarea>
+					<textarea id="extractorHour" rows="1" cols="15" placeholder="Hour:"></textarea>
+					<button type="submit" id="findDataDBRBut">Find</button>
+					<button type="submit" id="cancelExtractBut">X</button>
+				</div>
+
+				<!--<button type="submit" id="openEditExtractorData" hidden>Edit information</button>
+				<div id="DBREditBlock" style=" display: none;">
+					<textarea rows="1" cols="15" id="DBRInputDeleteCarId" placeholder="ID:"></textarea>
+					<textarea rows="1" cols="15" id="DBRInputDeleteCarPlate" placeholde  r="Plate:"></textarea>
+					<select id="selectCarRouteEditor">
+						<option value="МГ-1">МГ-1</option>
+						<option value="СПБ-малый круг">СПБ-малый круг</option>
+						<option value="Крым-Сочи">Крым-Сочи</option>
+						<option value="Строгино">Строгино</option>
+					</select>
+					<button type="submit" id="deleteDDRData">Delete</button>
+					<p></p>
+					<textarea rows="1" cols="15" id="DBRInputEditCarId" placeholder="ID:"></textarea>
+					<textarea rows="1" cols="15" id="DBRInputEditCarPlate" placeholder="Plate:"></textarea>
+					<select id="selectCarRouteEditEditor">
+						<option value="МГ-1">МГ-1</option>
+						<option value="СПБ-малый круг">СПБ-малый круг</option>
+						<option value="Крым-Сочи">Крым-Сочи</option>
+						<option value="Строгино">Строгино</option>
+					</select>
+					<button type="submit" id="EditDDRData">Edit</button>
+					<button type="submit" id="closeDBREditor">X</button>
+				</div>-->
+			</div>
+			<table id="display_DBR_data" border="2"></table>
+		</div>
+		<div class="tabs__tab " id="tab_8" data-tab-info>
+			<div class="main">
+			<div id="mainCross">
+				<!--правый нижний узел-->
+				<div id="rigtBottomLight">
+					<button type="submit" id="rigtBottomLightTransmitterBut">^^</button>
+					<button type="submit" id="rigtBottomLightRecieverBut">vv</button>
+				</div>
+				<button type="submit" id="rigtBottomLightCrosserTurn" hidden style="background-color: lightgray;">></button>
+				<button type="submit" id="rigtBottomLightCrosserStraight" style="background-color: lightgray;">|</button>
+				<div id="RightBottomLamp"><p style="color:white; margin-left: 7px; margin-top: 5px;">3</p></div>
+
+				<!--левый нижний узел-->
+				<div id="leftBottomLight">
+					<button type="submit" id="leftBottomTransmitterBut" style="border-radius: 50%;">>></button>.
+					<button type="submit" id="leftBottomRecieverBut" style="border-radius: 50%;"><<</button>
+				</div>
+				<button type="submit" id="leftBottomLightCrosserTurn" hidden  style="background-color: lightgray; font-weight: 700;">v</button>
+				<button type="submit" id="leftBottomLightCrosserStraight" style="background-color: lightgray; color:black;"><hr color="black"></button>
+				<div id="LeftBottomLamp"><p style="color:white; margin-left: 7px; margin-top: 5px;">4</p></div>
+
+				<!--левый верхний узел-->
+				<div id="leftTopLight"> 
+					<button type="submit" id="leftTopTransmitterBut" style="border-radius: 50%;">vv</button>.
+					<button type="submit" id="leftTopRecieverBut" style="border-radius: 50%;">^^</button>
+				</div>
+				<button type="submit" id="leftTopLightCrosserTurn" hidden style="background-color: lightgray;"><</button>
+				<button type="submit" id="leftTopLightCrosserStraight" style="background-color: lightgray;">|</button>
+				<div id="LeftTopLamp"><p style="color:white; margin-left: 7px; margin-top: 5px;">1</p></div>
+
+				<!--правый верхний узел-->
+				<div id="rightTopLight">
+					<button type="submit" id="rightTopRecieverBut" style="border-radius: 50%;">>></button>
+					<button type="submit" id="rightTopTransmitterBut" style="border-radius: 50%;"><<</button>
+				</div>
+				<button type="submit" id="rightTopightCrosserTurn" hidden style="background-color: lightgray; font-weight: 700;">^</button>
+				<button type="submit" id="rightTopLightCrosserStraight" style="background-color: lightgray; color:black;"><hr color="black"></button>
+				<div id="RightTopLamp"><p style="color:white; margin-left: 7px; margin-top: 5px;">2</p></div>
+			</div>
+			</div>
+
+			<!--контекстное меню светофора справа-низ-->
+			<div id="RightBottomLampContextMenu" style="display: none;">
+				<button type="submit" id="CLOSERightBottomLampContextMenuBut">X</button>
+				<input type="radio" id="RightBottomLampContextMenuRadioRED" name="RightBottomLampContextMenuRadio" value="red" checked />
+				<label for="red">RED</label>
+				<input type="radio" id="RightBottomLampContextMenuRadioORANGE" name="RightBottomLampContextMenuRadio" value="orange" />
+				<label for="orange">ORANGE</label>
+				<input type="radio" id="RightBottomLampContextMenuRadioGREEN" name="RightBottomLampContextMenuRadio" value="green" />
+				<label for="green">GREEN</label>
+				<input type="radio" id="RightBottomLampContextMenuRadioOFF" name="RightBottomLampContextMenuRadio" value="grey" />
+				<label for="OFF">OFF</label>
+			</div>
+
+			<!--контекстное меню светофора слева-низ-->
+			<div id="LeftBottomLampContextMenu" style="display: none;">
+				<button type="submit" id="CLOSELeftBottomLampContextMenu">X</button>
+				<input type="radio" id="LeftBottomLampContextMenuRadioRED" name="LeftBottomLampContextMenuRad" value="red" checked/>
+				<label for="LeftBottomLampContextMenuRadioRED">RED</label>
+				<input type="radio" id="LeftBottomLampContextMenuRadioORANGE" name="LeftBottomLampContextMenuRad" value="orange"/>
+				<label for="LeftBottomLampContextMenuRadioORANGE">ORANGE</label>
+				<input type="radio" id="LeftBottomLampContextMenuRadioGREEN" name="LeftBottomLampContextMenuRad" value="green"/>
+				<label for="LeftBottomLampContextMenuRadioGREEN">GREEN</label>
+				<input type="radio" id="LeftBottomLampContextMenuRadioOFF" name="LeftBottomLampContextMenuRad" value="grey"/>
+				<label for="LeftBottomLampContextMenuRadioOFF">OFF</label>
+			</div>  
+			
+			<!--контекстное меню светофора слева-верх-->
+			<div id="LeftTopLampContextMenu"  style="display: none;">
+				<button type="submit" id="CLOSELeftTopLampContextMenu">X</button>
+				<input type="radio" id="LeftTopLampContextMenuRadioRED" name="LeftTopLampContextMenuRad" value="red" checked/>
+				<label for="LeftTopLampContextMenuRadioRED">RED</label>
+				<input type="radio" id="LeftTopLampContextMenuRadioORANGE" name="LeftTopLampContextMenuRad" value="orange"/>
+				<label for="LeftTopLampContextMenuRadioORANGE">ORANGE</label>
+				<input type="radio" id="LeftTopLampContextMenuRadioGREEN" name="LeftTopLampContextMenuRad" value="green"/>
+				<label for="LeftTopLampContextMenuRadioGREEN">GREEN</label>
+				<input type="radio" id="LeftTopLampContextMenuRadioOFF" name="LeftTopLampContextMenuRad" value="grey"/>
+				<label for="LeftTopLampContextMenuRadioOFF">OFF</label>
+			</div>
+
+			<!--контекстное меню светофора справа-верх-->
+			<div id="RightTopLampContextMenu" style="display: none;">
+				<button type="submit" id="CLOSERightTopLampContextMenu">X</button>
+				<input type="radio" id="RightTopLampContextMenuRadioRED" name="RightTopLampContextMenuRad" value="red" checked/>
+				<label for="RightTopLampContextMenuRadioRED">RED</label>
+				<input type="radio" id="RightTopLampContextMenuRadioORANGE" name="RightTopLampContextMenuRad" value="orange"/>
+				<label for="RightTopLampContextMenuRadioORANGE">ORANGE</label>
+				<input type="radio" id="RightTopLampContextMenuRadioGREEN" name="RightTopLampContextMenuRad" value="green"/>
+				<label for="RightTopLampContextMenuRadioGREEN">GREEN</label>
+				<input type="radio" id="RightTopLampContextMenuRadioOFF" name="RightTopLampContextMenuRad" value="grey"/>
+				<label for="RightTopLampContextMenuRadioOFF">OFF</label>
+			</div>
+
+			<!--управляющее меню справа-низ-->
+			<div id="RightBottomControlMenu" style="display: none;">
+				<button type="submit" id="CLOSERightBottomControlMenuBut">X</button>
+				<button type="submit" id="OPENstartCommMenuRightBottomControlMenu">START</button>
+				<div id="startCommMenuRightBottomControlMenu" style="display: none;">
+					<button id="start12CommRightBottomControlMenu">start 12</button>
+					<button id="start14CommRightBottomControlMenu">start 14</button>
+				</div>
+				<button type="submit" id="OPENparametersCommMenuRightBottomControlMenu">PARAMETERS</button>
+				<div id="ParametersCommMenuRightBottomControlMenu" style="display:none;">
+					<button type="submit" id="parameter101CommMenuRightBottomControlMenu" style="margin-top: 32px;">parameter 101</button>
+					<button type="submit" id="parameter102CommMenuRightBottomControlMenu" >parameter 102</button>
+					<button type="submit" id="parameter103CommMenuRightBottomControlMenu" >parameter 103</button>
+					<textarea id="ParametersCommMenuRightBottomControlMenuTXT" rows="2" cols="12"></textarea>
+				</div>
+				<button type="submit" id="OPENstopCommMenuRightBottomControlMenu">STOP</button>
+				<div id="stopCommMenuRightBottomControlMenu" style="display:none;">
+					<button type="submit" id="fullStopCommRightBottomControlMenu">Full stop</button>
+					<button type="submit" id="stop13CommRightBottomControlMenu">stop 13</button>
+					<button type="submit" id="stop15CommRightBottomControlMenu" style="margin-left: 15px;">stop 15</button>
+					<button type="submit" id="stop16CommRightBottomControlMenu" style="margin-left: 15px;">stop 16</button>
+				</div>
+			</div>
+
+			<!--управляющее меню слева-низ-->
+			<div id="LeftBottomControlMenu" style="display: none;">
+				<button type="submit" id="CLOSELeftBottomControlMenuBut">X</button>
+				<button type="submit" id="OPENstartCommLeftBottomControlMenu">START</button>
+				<div id="startCommLeftBottomControlMenu" style="display: none;">
+					<button id="start12CommLeftBottomControlMenu" style="margin-top: 32px; margin-left: 2px;">start 12</button>
+					<button id="start14CommLeftBottomControlMenu" style=" margin-left: 2px;">start 14</button>
+				</div>
+				<button type="submit" id="OPENparametersCommMenuLeftBottomControlMenu">PARAMETERS</button>
+				<div id="ParametersCommMenuLeftBottomControlMenu" style="display: none;">
+					<button type="submit" id="parameter101CommMenuLeftBottomControlMenu" style="margin-top: 32px;">parameter 101</button>
+					<button type="submit" id="parameter102CommMenuLeftBottomControlMenu">parameter 102</button>
+					<button type="submit" id="parameter103CommMenuLeftBottomControlMenu">parameter 103</button>
+					<textarea id="ParametersCommMenuLeftBottomControlMenuTXT" rows="2" cols="12" style="margin-top: 5px;"></textarea>
+				</div>
+				<button type="submit" id="OPENstopCommMenuLeftBottomControlMenu">STOP</button>
+				<div id="stopCommMenuLeftBottomControlMenu" style="display: none;">
+					<button type="submit" id="stop13CommLeftBottomControlMenu" style="margin-top: 32px; margin-left: 14px;">stop 13</button>
+					<button type="submit" id="stop15CommLeftBottomControlMenu" style="margin-left: 14px;">stop 15</button>
+					<button type="submit" id="stop16CommLeftBottomControlMenu" style="margin-left: 14px;">stop 16</button>
+				</div>
+			</div>
+
+			<!--управляющее меню слева-верх-->
+			<div id="LeftTopControlMenu" style="display: none;">
+				<button type="submit" id="CLOSELeftTopControlMenuBut">X</button>
+				<button type="submit" id="OPENstartCommLeftTopControlMenu">START</button>
+					<div id="startCommLeftTopControlMenu" style="display: none;">
+						<button id="start12CommLeftTopControlMenu" style="margin-top: 32px; margin-left: 5px;">start 12</button>
+						<button id="start14CommLeftTopControlMenu" style="margin-left: 5px;">start 14</button>
+					</div>
+				<button type="submit" id="OPENparametersCommMenuLeftTopControlMenu">PARAMETER</button>
+				<div id="ParametersCommMenuLeftTopControlMenu"  style="display: none;" >
+					<button type="submit" id="parameter101CommMenuLeftTopControlMenu" style="margin-top: 32px;">parameter 101</button>
+					<button type="submit" id="parameter102CommMenuLeftTopControlMenu">parameter 102</button>
+					<button type="submit" id="parameter103CommMenuLeftTopControlMenu">parameter 103</button>
+					<textarea id="ParametersCommMenuLeftTopControlMenuTXT" rows="2" cols="10" style="margin-top: 5px;"></textarea>
+				</div>
+				<button type="submit" id="OPENstopCommMenuLeftTopControlMenu">STOP</button>
+				<div id="stopCommMenuLeftTopControlMenu" style="display: none;">
+					<button type="submit" id="stop13CommLeftTopControlMenu" style="margin-top: 32px; margin-left: 14px;">stop 13</button>
+					<button type="submit" id="stop15CommLeftTopControlMenu" style="margin-left: 14px;">stop 15</button>
+					<button type="submit" id="stop16CommLeftTopControlMenu" style="margin-left: 14px;">stop 16</button>
+				</div>
+			</div>
+
+			<!--управляющее меню справа-верх-->
+			<div id="RightTopControlMenu" style="display: none;">
+				<button type="submit" id="CLOSERightTopControlMenuBut">X</button>
+				<button type="submit" id="OPENstartCommRightTopControlMenu">START</button>
+					<div id="startCommRightTopControlMenu" style="display: none;">
+						<button id="start12CommRightTopControlMenu" style="margin-top: 32px; margin-left: 5px;">start 12</button>
+						<button id="start14CommRightTopControlMenu" style="margin-left: 5px;">start 14</button>
+					</div>
+				<button type="submit" id="OPENparametersCommMenuRightTopControlMenu">PARAMETER</button>
+					<div id="ParametersCommMenuRightTopControlMenu" style="display: none;">
+						<button type="submit" id="parameter101CommMenuRightTopControlMenu" style="margin-top: 32px;">parameter 101</button>
+						<button type="submit" id="parameter102CommMenuRightTopControlMenu">parameter 102</button>
+						<button type="submit" id="parameter103CommMenuRightTopControlMenu">parameter 103</button>
+						<textarea id="ParametersCommMenuRightTopControlMenuTXT" rows="2" cols="10" style="margin-top: 5px;"></textarea>
+					</div>
+				<button type="submit" id="OPENstopCommMenuRightTopControlMenu">STOP</button>
+					<div id="stopCommMenuRightTopControlMenu" style="display: none;">
+						<button type="submit" id="stop13CommRightTopControlMenu" style="margin-top: 32px; margin-left: 14px;">stop 13</button>
+						<button type="submit" id="stop15CommRightTopControlMenu" style="margin-left: 14px;">stop 15</button>
+						<button type="submit" id="stop16CommRightTopControlMenu" style="margin-left: 14px;">stop 16</button>
+					</div>
+			</div>
+			<div id="CrossingScenariosBlock">
+				<h1 style="margin-left: 134px;">Scenarios</h1>
+				<button type="submit" id="scenarioLineCrossingTestHBut">Line test H</button>
+				<button type="submit" id="scenarioLineCrossingTestVBut">Line test V</button>
+				<button type="submit" id="scenarioAllYellowBut">All yellow</button>
+				<button type="submit" id="scenarioTestAllBut">Test all</button>
+				<button type="submit" id="scenarioAllOFF">All OFF</button>
+			</div>
+	</div>
+	<div class="tabs__tab " id="tab_9" data-tab-info>
+		<div id="crossingControlOperator">
+			<!--правый нижний узел-->
+			<div id="operatorNahodkaRightBottomSteam">
+				<button type="submit" id="operatorNahodkaRightBottomSteamTransmitterBut">^^</button>
+				<button type="submit" id="operatorNahodkaRightBottomSteamTRecieverBut">vv</button>
+			</div>
+			<div id="operatorNahodkaRightBottomLamp"><p style="color:white; margin-left: 6px; margin-top: 5px;">3</p></div>
+			<button type="submit" id="operatorNahodkaRightBottomCrossingStraight">|</button>
+			<button type="submit" id="operatorNahodkaRightBottomCrossingRight" hidden style="background-color: blue; color:white;">></button>
+			<!--левый нижний узел-->
+			<div id="operatorNahodkaLeftBottomSteam">
+				<button type="submit" id="operatorNahodkaLeftBottomSteamTransmitterBut">>></button>
+				<button type="submit" id="operatorNahodkaLeftBottomSteamTRecieverBut"><<</button>
+			</div>
+			<div id="operatorNahodkaLeftBottomLamp"><p style="color:white; margin-left: 6px; margin-top: 5px;">4</p></div>
+			<button type="submit" id="operatorNahodkaLeftBottomCrossingStraight"><hr color="black"></button>
+			<button type="submit" id="operatorNahodkaLeftBottomCrossingRight" hidden style="background-color: blue; color:white;">v</button>
+			<!--левый верхний узел-->
+			<div id="operatorNahodkaLeftTopSteam">
+				<button type="submit" id="operatorNahodkaLeftTopSteamRecieverBut">^^</button>
+				<button type="submit" id="operatorNahodkaLeftTopSteamTransmitterBut">vv</button>
+			</div>
+			<div id="operatorNahodkaLeftTopLamp"><p style="color:white; margin-left: 6px; margin-top: 5px;">1</p></div>
+			<button type="submit" id="operatorNahodkaLeftTopCrossingStraight">|</button>
+			<button type="submit" id="operatorNahodkaLeftTopCrossingRight" hidden style="background-color: blue; color:white;"  ><</button>
+			<!--правый верхний узел-->
+			<div id="operatorNahodkaRightTopSteam">
+				<button type="submit" id="operatorNahodkaRightTopSteamRecieverBut">>></button>
+				<button type="submit" id="operatorNahodkaRightTopSteamTransmitterBut"><<</button>
+			</div>
+			<div id="operatorNahodkaRightTopLamp"><p style="color:white; margin-left: 6px; margin-top: 5px;">2</p></div>
+			<button type="submit" id="operatorNahodkaRightTopCrossingStraight"><hr color="black"></button>
+			<button type="submit" id="operatorNahodkaRightTopCrossingRight" hidden style="background-color: blue; color:white;">^</button>
+		</div>
+		<!--левый верхний датчик перед выездом с остановки-->
+		<div id="leftTopTransmitterRecieverBlock">
+			<button type="submit" id="operatorNahodkaleftTopTransmitterRecieverBlockRecieverBut">>></button>
+			<button type="submit" id="operatorNahodkaleftTopTransmitterRecieverBlockTransmitterBut"><<</button>
+		</div>
+		<!--левый верхний комбинированный узел-->
+		<div id="leftTopTransmitterRecieverCrossingBlock">
+			<div id="leftTopTransmitterRecieverCrossingTRBlock">
+				<button type="submit" id="operatorNahodkaleftTopTransmitterRecieverCrossingTRBlockTransmitterBut">>></button>
+				<button type="submit" id="operatorNahodkaleftTopTransmitterRecieverCrossingTRBlockRecieverBut" style="margin-left: 0px;"><<</button>
+			</div>
+			<button type="submit" id="operatorNahodkaleftTopTransmitterRecieverCrossingBlockCrossingStraight"><hr color="black"></button>
+			<button type="submit" id="operatorNahodkaleftTopTransmitterRecieverCrossingBlockCrossingRight" hidden style="background-color: blue; color:white;">v</button>
+		</div>
+		<!--левый нижний комбинированный узел-->
+		<div id="leftBottomTransmitterRecieverCrossingBlock">
+			<div id="leftBottomTransmitterRecieverCrossingTRBlock">
+				<button type="submit" id="operatorNahodkaleftTopTransmitterRecieverCrossingTRBlockTransmitterBut">>></button>
+				<button type="submit" id="operatorNahodkaleftTopTransmitterRecieverCrossingTRBlockRecieverBut" style="margin-left: 0px;"><<</button>
+			</div>
+			<button type="submit" id="operatorNahodkaleftBottomTransmitterRecieverCrossingBlockCrossingStraight"><hr color="black"></button>
+			<button type="submit" id="operatorNahodkaleftBottomTransmitterRecieverCrossingBlockCrossingRight" hidden style="background-color: blue; color:white;">v</button>
+		</div>
+		<div id="leftBottomTransmitterRecieverBlock">
+			<button type="submit" id="operatorNahodkaleftBottomTransmitterRecieverBlockTransmitterBut" style="margin-left: 0px;">>></button>
+			<button type="submit" id="operatorNahodkaleftBottomTransmitterRecieverBlockRecieverBut" style="margin-left: 0px;"><<</button>
+		</div>
+		<button type="submit" id="operatorNahodkaOpenToolsBut">Open control tools</button>
+		<div id="operatorNahodkaToolsBlock" style="display: none;">
+			<button type="submit" id="CLOSEoperatorNahodkaToolsBlock">X</button>
+			<button type="submit" id="OPENLightsBlock">Lights</button>
+			<button type="submit" id="OPENcrossesBlock">CR</button>
+			<div id="LightsBlock" style="display: none;">
+				<button type="submit" id="tLight1">TLIGHT 1</button>
+				<button type="submit" id="tLight2">TLIGHT 2</button>
+				<button type="submit" id="tLight3">TLIGHT 3</button>
+				<button type="submit" id="tLight4">TLIGHT 4</button>
+			</div>
+			<div id="crossesBlock" style="display: none;">
+				<button type="submit" id="tCross1Str">CR 1 -- </button>
+				<button type="submit" id="tCross1Rght" hidden>CR 1 ></button>
+				<button type="submit" id="tCross2Str">CR 2 -- </button>
+				<button type="submit" id="tCross2Rght" hidden>CR 2 ></button>
+				<button type="submit" id="tCross3Str">CR 3 -- </button>
+				<button type="submit" id="tCross3Rght" hidden>CR 3 ></button>
+				<button type="submit" id="tCross4Str">CR 4 -- </button>
+				<button type="submit" id="tCross4Rght" hidden>CR 4 ></button>
+				<button type="submit" id="tCross5Str">CR 5 -- </button>
+				<button type="submit" id="tCross5Rght" hidden>CR 5 ></button>
+				<button type="submit" id="tCross6Str">CR 6 -- </button>
+				<button type="submit" id="tCross6Rght" hidden>CR 6 ></button>
+			</div>
+		</div>
+		<!--Блок со сценариями движения через перекресток-->
+		<div id="scenesBlock" style="display: none;">
+			<button type="submit" id="CLOSEscenesBlockBut">X</button>
+			<button type="submit" id="scenario1">S1: top-bottom</button>
+			<button type="submit" id="scenario2">S2: left-right</button>
+			<button type="submit" id="scenario3">S3: bottom right-top right && top left-bottom left</button>
+			<button type="submit" id="scenario4">S4: top right-top left && bottom left-bottom right</button>
+			<button type="submit" id="scenario5">S5: ALL TURN RIGHT</button>
+		</div>
+		<!--треугольники контур 1-4-->
+		<div id="TRIANG1-4_1"></div>
+		<div id="TRIANG1-4_1Info" style="display: none;">
+			<button type="submit" id="CLOSETRIANG1-4_1Info">X</button>
+		</div>
+
+		<div id="TRIANG1-4_2"></div>
+		<div id="TRIANG1-4_2Info" style="display: none;">
+			<button type="submit" id="CLOSETRIANG1-4_2Info">X</button>
+		</div>
+
+		<div id="TRIANG1-4_3"></div>
+		<div id="TRIANG1-4_3Info" style="display: none;">
+			<button type="submit" id="CLOSETRIANG1-4_3Info">X</button>
+		</div>
+
+		<div id="TRIANG1-4_4"></div>
+		<div id="TRIANG1-4_4Info" style="display: none;">
+			<button type="submit" id="CLOSETRIANG1-4_4Info">X</button>
+		</div>
+
+		<!--треугольники контур 4-1-->
+		<div id="TRIANG4-1_1"></div>
+		<div id="TRIANG4-1_1Info" style="display: none;">
+			<button type="submit" id="CLOSETRIANG4-1_1Info">X</button>
+		</div>
+
+		<div id="TRIANG4-1_2" ></div>
+		<div id="TRIANG4-1_2Info" style="display: none;">
+			<button type="submit" id="CLOSETRIANG4-1_2Info">X</button>
+		</div>
+
+		<div id="TRIANG4-1_3"></div>
+		<div id="TRIANG4-1_3Info" style="display: none;">
+			<button type="submit" id="CLOSETRIANG4-1_3Info">X</button>
+		</div>
+
+		<div id="TRIANG4-1_4"></div>
+		<div id="TRIANG4-1_4Info" style="display: none;">
+			<button type="submit" id="CLOSETRIANG4-1_4Info">X</button>
+		</div>
+		<div id="TRIANG4-1_5"></div>
+		<div id="TRIANG4-1_5Info" style="display: none;">
+			<button type="submit" id="CLOSETRIANG4-1_5Info">X</button>
+		</div>
+
+		<!--треугольники контур 2-2-->
+		<div id="TRIANG2-2_1D"></div>
+		<div id="TRIANG2-2_1DInfo" style="display: none;">
+			<button type="submit" id="CLOSETRIANG2-2_1DInfo">X</button>
+		</div>
+
+		<div id="TRIANG2-2_2U"></div>
+		<div id="TRIANG2-2_2UInfo" style="display: none;">
+			<button type="submit" id="CLOSETRIANG2-2_2UInfo">X</button>
+		</div>
+
+		<!--треугольники контур 3-3-->
+		<div id="TRIANG3-3_1L"></div>
+		<div id="TRIANG3-3_1LInfo" style="display: none;">
+			<button type="submit" id="CLOSETRIANG3-3_1LInfo" >X</button>
+		</div>
+
+		<div id="TRIANG3-3_2R"></div>
+		<div id="TRIANG3-3_2RInfo" style="display: none;">
+			<button type="submit" id="CLOSETRIANG3-3_2RInfo" >X</button>
+		</div>
+	</div>
+	<div class="tabs__tab " id="tab_10" data-tab-info>
+		<div id="commTXTBlock">
+			<div id="TXTAreas">
+				<textarea cols="15" rows="1" id="scriptTXT_1" placeholder="part_1"></textarea><!--mdata 0 85 13-->
+				<button type="submit" id="SENDscriptTXT_1">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_2" placeholder="part_2"></textarea>
+				<button type="submit" id="SENDscriptTXT_2" >SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_3" placeholder="part_3"></textarea>
+				<button type="submit" id="SENDscriptTXT_3">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_4" placeholder="part_4"></textarea>
+				<button type="submit" id="SENDscriptTXT_4">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_5" placeholder="part_5"></textarea>
+				<button type="submit" id="SENDscriptTXT_5">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_6" placeholder="part_6"></textarea>
+				<button type="submit" id="SENDscriptTXT_6">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_7" placeholder="part_7"></textarea>
+				<button type="submit" id="SENDscriptTXT_7">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_8" placeholder="part_8"></textarea>
+				<button type="submit" id="SENDscriptTXT_8">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_9" placeholder="part_9"></textarea>
+				<button type="submit" id="SENDscriptTXT_9">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_10" placeholder="part_10"></textarea>
+				<button type="submit" id="SENDscriptTXT_10">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_11" placeholder="part_11"></textarea>
+				<button type="submit" id="SENDscriptTXT_11">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_12" placeholder="part_12"></textarea>
+				<button type="submit" id="SENDscriptTXT_12">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_13" placeholder="part_13"></textarea>
+				<button type="submit" id="SENDscriptTXT_13">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_14" placeholder="part_14"></textarea>
+				<button type="submit" id="SENDscriptTXT_14">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_15" placeholder="part_15"></textarea>
+				<button type="submit" id="SENDscriptTXT_15">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_16" placeholder="part_16"></textarea>
+				<button type="submit" id="SENDscriptTXT_16">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_17" placeholder="part_17"></textarea>
+				<button type="submit" id="SENDscriptTXT_17">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_18" placeholder="part_18"></textarea>
+				<button type="submit" id="SENDscriptTXT_18">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_19" placeholder="part_19"></textarea>
+				<button type="submit" id="SENDscriptTXT_19">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_20" placeholder="part_20"></textarea>
+				<button type="submit" id="SENDscriptTXT_20">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_21" placeholder="part_21"></textarea>
+				<button type="submit" id="SENDscriptTXT_21">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_22" placeholder="part_22"></textarea>
+				<button type="submit" id="SENDscriptTXT_22">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_23" placeholder="part_23"></textarea>
+				<button type="submit" id="SENDscriptTXT_23">SEND</button>
+				<textarea cols="15" rows="1" id="scriptTXT_24" placeholder="part_24"></textarea>
+				<button type="submit" id="SENDscriptTXT_24">SEND</button>
+			</div>
+		</div>
+		<button type="submit" id="megaTestCommsSequenceSave">Save</button>
+		<button type="submit" id="megaTestCommSequenceRunGet">Get</button>
+		<button type="submit" id="CLEARScriptPartsBut">Clear</button>
+		<button type="submit" id="OPENcreateScriptBlock">Create script</button>
+		<div id="createScriptBlock" style="display: block;">
+			<button type="submit" id="CLOSEcreateScriptBlock">X</button>
+			<textarea id="createScriptBlockPart_1TXT" cols="15" rows="1" placeholder="part 1"></textarea>
+			<!-- <textarea id="createScriptBlockPart_1TXTTimer" cols="15" rows="1" placeholder="Delay:"></textarea> -->
+			<textarea id="createScriptBlockPart_2TXT" cols="15" rows="1"  placeholder="part 2"></textarea>
+			<!-- <textarea id="createScriptBlockPart_2TXTTimer" cols="15" rows="1" placeholder="Delay:"></textarea> -->
+			<textarea id="createScriptBlockPart_3TXT" cols="15" rows="1" placeholder="part 3"></textarea>
+			<!-- <textarea id="createScriptBlockPart_3TXTTimer" cols="15" rows="1" placeholder="Delay:"></textarea> -->
+			<textarea id="createScriptBlockPart_4TXT" cols="15" rows="1"  placeholder="part 4"></textarea>
+			<!-- <textarea id="createScriptBlockPart_4TXTTimer" cols="15" rows="1" placeholder="Delay:"></textarea> -->
+			<textarea id="createScriptBlockPart_5TXT" cols="15" rows="1" placeholder="part 5"></textarea>
+			<!-- <textarea id="createScriptBlockPart_5TXTTimer" cols="15" rows="1" placeholder="Delay:"></textarea> -->
+			<textarea id="createScriptBlockPart_6TXT" cols="15" rows="1"  placeholder="part 6"></textarea>
+			<!-- <textarea id="createScriptBlockPart_6TXTTimer" cols="15" rows="1" placeholder="Delay:"></textarea> -->
+			<textarea id="createScriptBlockPart_7TXT" cols="15" rows="1" placeholder="part 7"></textarea>
+			<!-- <textarea id="createScriptBlockPart_7TXTTimer" cols="15" rows="1" placeholder="Delay:"></textarea> -->
+			<textarea id="createScriptBlockPart_8TXT" cols="15" rows="1"  placeholder="part 8"></textarea>
+			<!-- <textarea id="createScriptBlockPart_8TXTTimer" cols="15" rows="1" placeholder="Delay:"></textarea> -->
+			<textarea id="createScriptBlockPart_9TXT" cols="15" rows="1" placeholder="part 9"></textarea>
+			<!-- <textarea id="createScriptBlockPart_9TXTTimer" cols="15" rows="1" placeholder="Delay:"></textarea> -->
+			<textarea id="createScriptBlockPart_10TXT" cols="15" rows="1"  placeholder="part 10"></textarea>
+			<!-- <textarea id="createScriptBlockPart_10TXTTimer" cols="15" rows="1" placeholder="Delay:"></textarea> -->
+			<textarea id="createScriptBlockPart_11TXT" cols="15" rows="1" placeholder="part 11"></textarea>
+			<!-- <textarea id="createScriptBlockPart_11TXTTimer" cols="15" rows="1" placeholder="Delay:"></textarea> -->
+			<textarea id="createScriptBlockPart_12TXT" cols="15" rows="1"  placeholder="part 12"></textarea>
+			<!-- <textarea id="createScriptBlockPart_12TXTTimer" cols="15" rows="1" placeholder="Delay:"></textarea> -->
+			<button type="submit" id="SAVEcreateScriptBlockPart_1">SAVE</button>
+			<select id="ScriptNames"></select>
+			<button type="submit" id="RUNScriptBut">Run script</button>
+			<button type="submit" id="addScriptToQBut">Add to Queue</button>
+			<button type="submit" id="CLEARTxtcreateScriptBlock">Clear</button>
+		</div>
+		<div id="scriptQueue"  style="display: none;">
+			<p style="margin-left: 10px;"> 1:</p>
+			<textarea cols="15" rows="1" id="Qscript_1"></textarea>
+			<p style="margin-left: 10px;"> 2:</p>
+			<textarea cols="15" rows="1" id="Qscript_2"></textarea>
+			<p style="margin-left: 10px;"> 3:</p>
+			<textarea cols="15" rows="1" id="Qscript_3"></textarea>
+			<p style="margin-left: 10px;"> 4:</p>
+			<textarea cols="15" rows="1" id="Qscript_4"></textarea>
+			<button type="submit" id="RUNscriptQueueBut">Run</button>
+		</div>
+		<div id="notification" style="display: none;">
+			<h2 style="margin-left: 35px;">Enter script name</h2>
+				<textarea id="notificationScriptName" cols="10" rows="1" ></textarea> 
+				<button type="submit" id="notificationScriptNameCancel" >Cancel</button>
+				<button type="submit" id="notificationScriptOK" >OK</button> 
+				<select id="notificationScriptType" >
+					<option value="0">Type</option>
+					<option value="JS">JS</option>
+					<option value="TXT">TXT</option>
+				</select>
+		</div> 
+		<div id="notificationSaveCS" style="display: none;">
+			<h2 id="h2">SAVE</h2>
+			<textarea id="notificationScriptNameSaveCS" cols="10" rows="1" ></textarea> 
+			<button type="submit" id="CANCELnotificationSaveCS">Cancel</button>
+			<button type="submit" id="SAVEnotificationSaveCS">Save</button>
+		</div>
+		<div id="notificationScriptNameRunPrintCS" style="display: none;">
+			<h2 id="h2">Get CS</h2>
+
+			<select id="SelectnotificationScriptNameRunPrintCSSelect"></select>
+			<button type="submit" id="CANCELnotificationScriptNameRunPrintCS">X</button>
+			<h3 id="h3">Timer:</h3>
+			<textarea cols="10" rows="1" id="setTimerTXT"></textarea>
+			<button type="submit" id="PRINTnotificationScriptNameRunPrintCS">Load commands</button>
+			<!--<button type="submit" id="RUNnotificationScriptNameRunPrintCS">Run</button>-->
+		</div>
+		<div id="modalSetTimer"  style="display: block;">
+			<textarea id="timerValueTXT" cols="23" rows="1" placeholder="Timer:"></textarea>
+			<button type="submit" id="CLOSEmodalSetTimer">X</button>
+		</div>
+		<div class="monitorMainCheckSMegaTest">
+				<textarea rows="1" cols="30" id="TxtToSendSMegaTest"></textarea>
+				<button type="submit" id="TxtSendSMegaTestBut">Send</button>
+				<input type="checkbox" id="ScrollTxtToSendSMegaTestCheck" >SCROLL</input>
+				<textarea rows="1" cols="19" id="voltageInfSMegaTestTxt"></textarea>
+				<textarea rows="13" cols="65" id="TxtRecievedSMegaTest"></textarea>
+				<button type="submit" id="MEGATESTclearBut">Clear output</button>
+		</div>
+	</div>
+<script src="./index.js"></script>
 </body>
+
 </html>

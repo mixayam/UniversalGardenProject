@@ -1,31 +1,46 @@
 {
-  "name": "UniversalGardenBoxProject_v7_1",
+  "name": "UniversalControlSystem",
   "version": "1.0.2",
   "description": "GH_father_update",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . UniversalGardenBoxProject_v7_1 --platform win32 --arch x64 --out dist/",
-    "rebuild": "electron-rebuild -f -w . UniversalGardenBoxProject_v7_1"
+    "build": "electron-packager . UniversalControlSystem --platform win32 --arch x64 --out dist/",
+    "rebuild": "electron-rebuild -f -w . UniversalControlSystem"
   },
   "install": "electron-rebuild",
   "author": "Yuri",
   "license": "UNLICENSED",
   "dependencies": {
+    "3": "^2.1.0",
     "@arduino/arduino-iot-client": "^1.2.0",
     "arduino": "^0.2.3",
     "axios": "^0.21.1",
+    "bootstrap": "^5.3.3",
+    "builder": "^5.0.0",
     "chart.js": "^2.9.4",
-    "csv": "^5.3.2",
+    "createjs": "^1.0.1",
+    "csv": "^5.5.3",
+    "csv-stringify": "^6.5.0",
+    "csv-writer": "^1.6.0",
+    "electron-builder": "^24.13.3",
     "electron-promise-ipc": "^2.0.1",
     "electron-rebuild": "^2.3.5",
     "fs": "0.0.1-security",
-    "serialport": "^9.0.7"
+    "json2csv": "^6.0.0-alpha.2",
+    "nedb": "^1.8.0",
+    "node-notifier": "^10.0.1",
+    "paper": "^0.12.17",
+    "serialport": "^9.0.7",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
-    "electron": "^12.0.1",
-    "electron-packager": "^15.2.0",
+    "electron": "^12.2.3",
+    "electron-packager": "^15.5.2",
     "latest": "^0.2.0",
+    "packager": "^0.1.9",
     "request-promise": "^4.2.6"
   }
 }

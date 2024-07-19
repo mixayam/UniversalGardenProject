@@ -1,0 +1,3919 @@
+body {
+  /*background-color:#1f1f1f;*/
+  background-color: grey;
+}
+
+.upperMenu {
+  width: 100%;
+  height: 20px;
+  border: 2px solid black;
+  background-color: blue;
+}
+
+/* Кнопка выпадающего списка */
+.dropbtn {
+  background-color: blue;
+  color: white;
+  padding: 1px;
+  font-size: 13px;
+  border: none;
+  border: 1px solid black;
+}
+
+/* Контейнер <div> - необходим для размещения выпадающего содержимого */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Показать выпадающее меню при наведении курсора */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+.dropdown:hover .dropbtn {
+  background-color: lightblue;
+}
+
+nav {
+  margin: 0px 0px;
+  background-color: #e64a19;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li {
+  margin: 0px -7px 0 0;
+  display: inline-block;
+  background-color: #e64a19;
+}
+
+nav a {
+  display: block;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 15px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #000000;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+
+/* отображаем выпадающий список при наведении */
+nav ul li:hover > ul {
+  display: inherit;
+}
+
+/* первый уровень выпадающего списка */
+nav ul ul li {
+  min-width: 170px;
+  float: none;
+  display: list-item;
+  position: relative;
+}
+
+/* второй? уровень выпадающего списка */
+nav ul ul ul li {
+  min-width: 370px;
+  float: none;
+  display: list-item;
+  position: relative;
+}
+
+nav ul ul ul {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+.SaveMyConfigButton {
+  margin-left: -110px;
+}
+
+.EEPara {
+  width: 815px;
+  height: 115px;
+  border: 2px solid black;
+  margin-top: 500px;
+  position: absolute;
+}
+
+.ParaNum {
+  height: 10px;
+  width: 150px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.radioControl {
+  border: 2px solid black;
+  height: 143px;
+  width: 810px;
+  margin-top: 630px;
+  position: absolute;
+}
+
+.EEShow {
+  border: 2px solid black;
+  width: 220px;
+  height: 120px;
+  margin-top: 5px;
+  margin-left: 5px;
+  float: left;
+}
+
+.EESet {
+  border: 2px solid black;
+  width: 220px;
+  height: 128px;
+  margin-top: 5px;
+  margin-left: 235px;
+}
+
+.upperMenu {
+  width: 100%;
+  height: 20px;
+  border: 2px solid black;
+  background-color: blue;
+}
+
+/* Кнопка выпадающего списка */
+.dropbtn {
+  background-color: blue;
+  color: white;
+  padding: 1px;
+  font-size: 13px;
+  border: none;
+  border: 1px solid black;
+}
+
+/* Контейнер <div> - необходим для размещения выпадающего содержимого */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Показать выпадающее меню при наведении курсора */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+.dropdown:hover .dropbtn {
+  background-color: lightblue;
+}
+
+.ConnectionSetup {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  width: 550px;
+  float: left;
+  margin-top: 10px;
+  background-color: #c8e6c9;
+  margin-left: 10px;
+}
+
+.button {
+  color: white;
+  text-decoration: none;
+  border: 1px solid black;
+}
+
+.button:link {
+  color: white;
+  text-decoration: none;
+  border: 1px solid black;
+}
+
+.button:visited {
+  color: white;
+  text-decoration: none;
+  border: 1px solid black;
+}
+
+/*.parcedValuesGet{
+      width: 150px;
+      height: 450px;
+      border:2px solid black;
+      margin-left: 10px;
+      
+    }*/
+
+/*textarea{
+      margin-top: 10px;
+    }*/
+
+/*#getParcedValues{
+      width: 75px;
+      margin-left: 35px;
+    }*/
+
+/*.parcedValuesSend{
+      width: 150px;
+      height: 450px;
+      border:2px solid black;
+      margin-left: 170px;
+      margin-top: -453px;
+    }*/
+
+/* #sendParcedValues{
+      width: 75px;
+      margin-left: 35px;
+    }*/
+
+/*.parcedValuesSaved{
+      width: 150px;
+      height: 450px;
+      border:2px solid black;
+      margin-left: 330px;
+      margin-top: -453px;
+    }*/
+
+/* #savedParcedValues{
+      width: 75px;
+      margin-left: 35px;
+    }*/
+
+/*.misc{
+      width: 280px;
+      height: 150px;
+      border: 2px solid black;
+      margin-top: 10px;
+      margin-left: 10px;
+    }*/
+
+/*.codeParcedNew{
+      border: 2px solid black;
+      width: 420px;
+      height: 650px;
+      margin-top: 910px;
+      margin-left: 10px;
+      position: fixed;
+    }*/
+
+#getStatusBut {
+  width: 100px;
+  margin-left: 150px;
+  margin-top: 15px;
+}
+
+.carTestMainBLock {
+  width: 635px;
+  height: 500px;
+  border: 2px solid black;
+  margin-top: 10px;
+}
+
+.carHeadlightsTest {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  margin-top: 10px;
+}
+
+.carBlinkersTest {
+  width: 200px;
+  height: 330px;
+  border: 2px solid black;
+  margin-top: 10px;
+  margin-left: 210px;
+  margin-top: -203px;
+}
+
+.carBacklightsTest {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  margin-top: 10px;
+  margin-left: 420px;
+  margin-top: -333px;
+}
+
+.testBut {
+  width: 100px;
+  margin-left: 50px;
+}
+
+.statusParced {
+  border: 2px solid black;
+  width: 255px;
+  height: 472px;
+  margin-top: 10px;
+  margin-left: 565px;
+  float: left;
+  position: absolute;
+}
+
+.codeParced {
+  border: 2px solid black;
+  width: 460px;
+  height: 630px;
+  position: absolute;
+  margin-top: 230px;
+  margin-left: 715px;
+}
+
+.IREngine {
+  width: 250px;
+  height: 250px;
+  border: 2px solid black;
+  position: absolute;
+  margin-top: 655px;
+  margin-left: 835px;
+}
+
+.IRComm {
+  width: 150px;
+}
+
+.parcedValuesGet {
+  background-color: #c8e6c9;
+  width: 760px;
+  height: 509px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  margin-left: 1px;
+  position: absolute;
+  margin-top: 2px;
+
+}
+
+.parcedValuesGet textarea {
+  margin-top: 5px;
+}
+
+.parcedValuesGet textarea {
+  height: 15px;
+}
+
+.parcedValuesSend {
+  background-color: #c8e6c9;
+  width: 195px;
+  height: 458px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  margin-left: 749px;
+  position: absolute;
+  margin-top: -21px;
+}
+
+.parcedValuesSaved {
+  background-color: #c8e6c9;
+  width: 195px;
+  height: 458px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  margin-left: 528px;
+  position: absolute;
+  margin-top: -21px;
+}
+
+.misc {
+  background-color: #c8e6c9;
+  width: 280px;
+  height: 120px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  margin-left: 490px;
+  position: absolute;
+  margin-top: -15px;
+}
+
+.controls {
+  background-color: #c8e6c9;
+  width: 108px;
+  height: 190px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  margin-left: 772px;
+  position: absolute;
+  margin-top: 305px;
+}
+
+#TypeOfDataCH {
+  margin-left: 17px;
+  margin-top: 4px;
+}
+
+#getMsgWrdBut {
+  margin-left: 542px;
+  margin-top: 13px;
+}
+
+#parceMsgWD {
+  margin-left: 530px;
+  margin-top: 26px;
+}
+
+.parcedTBL {
+  margin-top: -68px;
+  margin-left: 15px;
+}
+
+.formsInfo {
+  width: 150px;
+  margin-left: 156px;
+  margin-top: 22px;
+  position: absolute;
+}
+
+.formsInfo textarea {
+  margin-top: 5px;
+}
+
+.controls button {
+  width: 75px;
+  margin-left: 15px;
+}
+
+.parcedConfigWord {
+  background-color: #c8e6c9;
+  width: 681px;
+  height: 471px;
+  margin-left: 0px;
+  margin-top: -90px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  position: absolute;
+}
+
+.systemConfig {
+  background-color: #c8e6c9;
+  width: 418px;
+  height: 305px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  margin-left: 904px;
+  margin-top: 315px;
+}
+
+#statusAcceptBut{
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.commandGenerator {
+  background-color: #c8e6c9;
+  width: 290px;
+  height: 215px;
+  margin-left: 290px;
+  /*border:2px solid black;*/
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  position: absolute;
+  margin-top: 15px;
+}
+
+.commandGenerator select {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.commandGenerator textarea {
+  width: 50px;
+}
+
+.commsWArgs {
+  margin-top: 10px;
+}
+
+.commsWArgs textarea {
+  margin-left: 10px;
+  width: 150px;
+}
+
+.testBlock {
+  width: 800px;
+  height: 250px;
+  border: 2px solid black;
+  position: absolute;
+  margin-top: 285px;
+  margin-left: 580px;
+}
+
+.modifyBLock {
+  background-color: #c8e6c9;
+  width: 460px;
+  height: 70px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  margin-left: 10px;
+  position: absolute;
+  margin-top: 15px;
+}
+
+.modifyBLock select {
+  margin-left: 10px;
+}
+
+.modifyBLock textarea {
+  margin-left: 10px;
+}
+
+.testLights {
+  width: 275px; /*560*/
+  height: 215px;
+  /*border:2px solid black;*/
+  background-color: #c8e6c9;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 5px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+.motorONParas {
+  margin-top: 5px;
+}
+
+/* * {
+            margin: 0;
+            padding: 0;
+        }*/
+
+/* body {
+            background: white;
+        }*/
+
+.container {
+  /*border: 1px solid grey;*/
+  /*margin: 1rem;*/
+  margin-left: 0px;
+}
+
+[data-tab-info] {
+  display: none;
+}
+
+.active[data-tab-info] {
+  display: block;
+}
+
+.tab-content {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  font-size: 10px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.tabs {
+  border-bottom: 1px solid grey;
+  background-color: grey;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  margin: 0;
+  border-radius: 5px;
+}
+
+.tabs span {
+  background: #c8e6c9;
+  padding: 10px;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+
+.tabs span:hover {
+  background: lightgreen;
+  cursor: pointer;
+  color: black;
+}
+
+textarea {
+  /*border-radius: 10px;*/
+  resize: none;
+  /*background-color:red;*/
+}
+
+button {
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.parcedValuesGet textarea {
+  height: 16px;
+}
+
+.parcedValuesSaved textarea {
+  margin-top: 5px;
+  height: 16px;
+}
+
+.monitorMainCheck {
+  width: 569px;
+  height: 277px;
+  border: 2px solid black;
+  margin-top: 242px;
+  margin-left: 8px;
+  border-radius: 10px;
+}
+
+#TxtRecievedTest {
+  margin-left: 10px;
+  /*border-radius:10px;*/
+  margin-top: 10px;
+}
+
+#TxtToSendTest {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+#TxtSendTestBut {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+#ScrollTxtToSendTestCheck {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.monitorMainCheckSSetup {
+  background-color: #c8e6c9;
+  width: 549px;
+  height: 289px;
+  /* border: 2px solid black; */
+  margin-top: -608px;
+  margin-left: 772px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+#TxtRecievedSSetup {
+  margin-left: 10px;
+  width: 518px;
+  /*border-radius:10px;*/
+  margin-top: 10px;
+}
+
+#TxtToSendSSetup {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+#TxtSendSSetupBut {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+#ScrollTxtToSendSSetupCheck {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.modeChoiceBlock {
+  width: 157px;
+  height: 155px;
+  margin-top: -36px;
+  margin-left: 573px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+}
+
+#modeChooseSLCT {
+  margin-top: 8px;
+  margin-left: 11px;
+  border-radius: 10px;
+}
+
+#portChooseSLCT {
+  margin-top: 8px;
+  margin-left: 11px;
+  border-radius: 10px;
+}
+
+#tab_1 {
+  border: 2px solid black;
+  width: 744px;
+  /* width: min-content + 0px;*/
+  height: 530px;
+  margin-left: -10px;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+#CLOSEspecialCommsBlock {
+  margin-top: 6px;
+  margin-left: 124px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  position: absolute;
+}
+
+#specialCommsBlock {
+  /*border: 2px solid black;*/
+  width: 154px;
+  height: 306px;
+  margin-top: 17px;
+  margin-left: 575px;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+}
+
+#dateInfMainTxt {
+  margin-left: 388px;
+}
+
+.fileTypeCh {
+  width: 157px;
+  height: 155px;
+  margin-top: 10px;
+  margin-left: 573px;
+  /* border: 2px solid black; */
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+}
+
+#carInfoTxt {
+  margin-top: 6px;
+  margin-left: 17px;
+}
+
+.dataBaseWorksMain {
+  width: 439px;
+  height: 42px;
+  margin-top: -8px;
+  margin-left: 119px;
+  /*border: 2px solid black;*/
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+}
+
+#carDBIDMain {
+  width: 51px;
+  margin-top: 9px;
+  margin-left: 64px;
+  position: absolute;
+}
+
+#carDBNameMain {
+  width: 136px;
+  margin-top: 9px;
+  margin-left: 135px;
+  position: absolute;
+}
+
+#carDBPlateMain {
+  width: 128px;
+  margin-top: 9px;
+  margin-left: 294px;
+  position: absolute;
+}
+
+#tab_2 {
+  border: 2px solid black;
+  width: 744px;
+  /* width: min-content + 0px;*/
+  height: 530px;
+  margin-left: -10px;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+#tab_3 {
+  border: 2px solid black;
+  width: 744px;
+  /* width: min-content + 0px;*/
+  height: 530px;
+  margin-left: -10px;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+#carResetBut {
+  width: 32px;
+}
+
+#carReset210But {
+  width: 39px;
+  margin-left: 0px;
+}
+
+#parcedValuesGetunitID {
+  background-color: white;
+  color: black;
+}
+
+#dataClearBut {
+  margin-top: -460px;
+  margin-left: -48px;
+  position: absolute;
+}
+
+#reAskDataBut {
+  background-color: white;
+}
+
+#parcedValuesGetSoftInfo {
+  background-color: white;
+  color: black;
+  border-color: red;
+}
+
+#parcedValuesSavedSoftInfo {
+  background-color: white;
+  color: black;
+  border-color: red;
+}
+
+#parcedValuesSendSoftInfo {
+  background-color: white;
+  color: black;
+  border-color: red;
+}
+
+#parcedValuesGetPinsInfo {
+  background-color: white;
+  color: black;
+  border-color: red;
+}
+
+#parcedValuesSavedPinsInfo {
+  background-color: white;
+  color: black;
+  border-color: red;
+}
+
+#parcedValuesSendPinsInfo {
+  background-color: white;
+  color: black;
+  border-color: red;
+}
+
+#parcedValuesGetInitInfo {
+  background-color: white;
+  color: black;
+  border-color: red;
+}
+
+#parcedValuesSavedInitInfo {
+  background-color: white;
+  color: black;
+  border-color: red;
+}
+
+#parcedValuesSendInitInfo {
+  background-color: white;
+  color: black;
+  border-color: red;
+}
+
+#commentDiagDBTxt {
+  margin-top: 8px;
+  margin-left: 339px;
+  position: absolute;
+}
+
+#getCurrentValuesBut {
+  width: 85px;
+}
+
+#getStoredValuesBut {
+  width: 85px;
+}
+
+#tab_4 {
+  border: 2px solid black;
+  width: 1334px;
+  height: 1009px;
+  margin-left: -23px;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+#tab_5 {
+  border: 2px solid black;
+  width: 744px;
+  height: 530px;
+  margin-left: -10px;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+.DBInsertDataDiagnostic {
+  margin-top: 48px;
+  margin-left: 37px;
+  width: 386px;
+  height: 400px;
+  /* border: 2px solid black; */
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+}
+
+#DBIGetStoredData {
+  width: 52px;
+  margin-top: 31px;
+  margin-left: -370px;
+  position: absolute;
+  border-bottom-left-radius: 10px;
+}
+
+#DBIcommentTxt {
+  margin-left: -264px;
+  margin-top: 27px;
+  position: absolute;
+}
+
+#DBISaveStoredData {
+  width: 46px;
+  height: 41px;
+  margin-top: 26px;
+  margin-left: -30px;
+  background-color: blue;
+  border-bottom-right-radius: 10px;
+  color: white;
+  position: absolute;
+}
+
+#clearDBScreenBut {
+  width: 107px;
+  height: 38px;
+  margin-top: 4px;
+  margin-left: 4px;
+  position: absolute;
+  background: red;
+  color: white;
+}
+
+.DBDateInfo {
+  margin-top: 0px;
+  margin-left: 0px;
+  border: 2px solid black;
+  width: 150px;
+  height: 150px;
+}
+
+.DBDataExtract {
+  border: 2px solid black;
+  width: 0px;
+  height: 0px;
+  margin-left: 900px;
+  position: absolute;
+}
+
+#dateDayForDBCH {
+  width: 45px;
+  height: 22px;
+  margin-top: -27px;
+  margin-left: 436px;
+  border-radius: 10px;
+}
+
+#dateHourForDBCH {
+  width: 45px;
+  height: 22px;
+  margin-top: -27px;
+  margin-left: 492px;
+  border-radius: 10px;
+}
+
+#dateMinuteForDBCH {
+  width: 45px;
+  height: 22px;
+  margin-top: -27px;
+  margin-left: 549px;
+  border-radius: 10px;
+}
+
+#DBScreenTxt {
+  width: 1482px;
+  height: 424px;
+  margin-top: 464px;
+  margin-left: 3px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+}
+
+.dataBaseWorks {
+  width: 724px;
+  height: 42px;
+  margin-top: 0px;
+  margin-left: 8px;
+  /* border: 2px solid black; */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+  position: absolute;
+}
+
+#carDBID {
+  width: 51px;
+  margin-top: 9px;
+  margin-left: 64px;
+  position: absolute;
+}
+
+#carDBName {
+  width: 136px;
+  margin-top: 9px;
+  margin-left: 135px;
+  position: absolute;
+}
+
+#carDBPlate {
+  width: 128px;
+  margin-top: 9px;
+  margin-left: 294px;
+  position: absolute;
+}
+
+.DBInteractor {
+  width: 171px;
+  height: 145px;
+  margin-top: 4px;
+  margin-left: 593px;
+  /* border: 2px solid black; */
+  border-top-right-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+  position: absolute;
+}
+
+.DBExtractInteractor {
+  height: 123px;
+  width: 168px;
+  margin-top: 3px;
+  margin-left: 10px;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+}
+
+#findAllDATEInDB {
+  width: 53px;
+  height: 20px;
+  margin-top: 0px;
+  margin-left: 229px;
+  background: green;
+  color: white;
+  position: absolute;
+  border-top-right-radius: 10px;
+}
+
+#findDATEInDB {
+  background: blue;
+  color: white;
+}
+
+#DBExtractInteractorClose {
+  background: red;
+  color: white;
+}
+
+#enterCarDBID {
+  width: 135px;
+  margin-top: 0px;
+  margin-left: 31px;
+  position: absolute;
+  border-top-right-radius: 10px;
+}
+
+#enterCarDBName {
+  width: 136px;
+  margin-top: 28px;
+  margin-left: 30px;
+  position: absolute;
+}
+
+#enterCarDBPlate {
+  width: 135px;
+  margin-top: 57px;
+  margin-left: 31px;
+  position: absolute;
+}
+
+#enterCarDBColor {
+  width: 135px;
+  margin-top: 87px;
+  margin-left: 31px;
+  position: absolute;
+}
+
+#enterCarDataApplyBut {
+  width: 63px;
+  height: 23px;
+  margin-top: 117px;
+  margin-left: 2px;
+  background-color: blue;
+  color: white;
+  position: absolute;
+}
+
+#enterCarDataCancelCloseBut {
+  width: 93px;
+  height: 23px;
+  margin-top: 116px;
+  margin-left: 73px;
+  background-color: red;
+  color: white;
+  position: absolute;
+}
+
+#getDBasedCarDBDataBut {
+  width: 168px;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: -34px;
+  background-color: green;
+  color: white;
+  position: absolute;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+#addDataToCarDBBut {
+  width: 168px;
+  height: 30px;
+  margin-left: 550px;
+  margin-top: 4px;
+  background-color: blue;
+  color: white;
+  position: absolute;
+  border-top-right-radius: 10px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+#tab_6 {
+  border: 2px solid black;
+  width: 1313px;
+  height: 563px;
+  margin-left: -10px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+#display_json_data {
+  margin-top: 110px;
+}
+
+.dataBaseWorksDBI {
+  width: 150px;
+  height: 111px;
+  margin-top: 1px;
+  margin-left: 4px;
+  /* border: 2px solid black; */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+}
+
+#carDBIDDBI {
+  width: 51px;
+  margin-top: 9px;
+  margin-left: 8px;
+  position: absolute;
+}
+
+#carDBNameDBI {
+  width: 128px;
+  margin-top: 40px;
+  margin-left: 8px;
+  position: absolute;
+}
+
+#carDBPlateDBI {
+  width: 128px;
+  margin-top: 72px;
+  margin-left: 8px;
+  position: absolute;
+}
+
+.DBIOperator {
+  width: 811px;
+  height: 200px;
+  margin-top: -111px;
+  margin-left: 501px;
+  border-top-right-radius: 10px;
+  position: absolute;
+  /* border: 2px solid black; */
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+}
+
+#enterDeleteCarID {
+  margin-top: 10px;
+}
+
+/*#enterDeleteDay{
+  margin-top: 10px;
+}*/
+
+#enterDeleteHour {
+  margin-top: 10px;
+}
+
+#deleteDBIData {
+  background-color: red;
+  color: white;
+  margin-top: 10px;
+  margin-left: 308px;
+  position: absolute;
+}
+
+#enterAccessCarID {
+  background-color: lightgreen;
+  font-weight: 700;
+  width: 45px;
+  margin-left: 0px;
+}
+
+#enterAccessCarID::placeholder {
+  color: black;
+  font-weight: 700;
+}
+
+#enterAccessDay {
+  background-color: lightgreen;
+  font-weight: 700;
+  width: 63px;
+  margin-left: 0px;
+}
+
+#enterAccessDay::placeholder {
+  color: black;
+  font-weight: 700;
+}
+
+#enterAccessHour {
+  background-color: lightgreen;
+  font-weight: 700;
+  width: 52px;
+  margin-left: 0px;
+}
+
+#enterAccessHour::placeholder {
+  color: black;
+  font-weight: 700;
+}
+
+#enterDeleteCarID {
+  background-color: red;
+  color: white;
+  width: 45px;
+  margin-left: 0px;
+}
+
+#enterDeleteCarID::placeholder {
+  color: white;
+}
+
+#enterDeleteDay {
+  background-color: red;
+  color: white;
+  width: 63px;
+  margin-left: 0px;
+}
+
+#enterDeleteDay::placeholder {
+  color: white;
+}
+
+#enterDeleteHour {
+  background-color: red;
+  color: white;
+  width: 52px;
+  margin-left: 0px;
+}
+
+#enterDeleteHour::placeholder {
+  color: white;
+}
+
+#enterDeleteMinute {
+  background-color: red;
+  color: white;
+  width: 59px;
+  margin-left: 0px;
+}
+
+#enterDeleteMinute::placeholder {
+  color: white;
+}
+
+#enterDeleteSecond {
+  background-color: red;
+  color: white;
+  width: 59px;
+  margin-left: 0px;
+}
+
+#enterDeleteSecond::placeholder {
+  color: white;
+}
+
+#enterUpdateCarID {
+  background-color: blue;
+  color: white;
+  width: 45px;
+  margin-left: 0px;
+}
+
+#enterUpdateCarID::placeholder {
+  color: white;
+}
+
+#enterUpdateDay {
+  background-color: blue;
+  color: white;
+  width: 68px;
+  height: 22px;
+  margin-left: 62px;
+  margin-top: 0px;
+  position: absolute;
+}
+
+#enterUpdateDay::placeholder {
+  color: white;
+}
+
+#enterUpdateHour {
+  background-color: blue;
+  color: white;
+  width: 57px;
+  height: 22px;
+  margin-left: 134px;
+  margin-top: 0px;
+  position: absolute;
+}
+
+#enterUpdateHour::placeholder {
+  color: white;
+}
+
+#enterUpdateMinute {
+  background-color: blue;
+  color: white;
+  width: 64px;
+  height: 22px;
+  margin-left: 195px;
+  margin-top: 0px;
+  position: absolute;
+}
+
+#enterUpdateMinute::placeholder {
+  color: white;
+}
+
+#enterUpdateSecond {
+  background-color: blue;
+  color: white;
+  width: 65px;
+  height: 22px;
+  margin-left: 262px;
+  margin-top: 0px;
+  position: absolute;
+}
+
+#enterUpdateSecond::placeholder {
+  color: white;
+}
+
+#enterUpdateValue {
+  margin-top: 0px;
+  margin-left: 440px;
+  width: 179px;
+  height: 44px;
+  background-color: blue;
+  color: white;
+  position: absolute;
+}
+
+#enterUpdateValue::placeholder {
+  color: white;
+}
+
+#DBIParasChehange {
+  width: 101px;
+  height: 22px;
+  margin-left: 335px;
+  margin-top: 0px;
+  position: absolute;
+  background-color: blue;
+  color: white;
+}
+
+#updateStringInDBBut {
+  margin-left: 630px;
+  margin-top: -1px;
+  height: 22px;
+  position: absolute;
+  background-color: blue;
+  color: white;
+}
+
+#carDBRExName {
+  font-weight: 700;
+}
+
+#carDBRExPlate {
+  font-weight: 700;
+}
+
+#accessCarByNameForRestore {
+  margin-top: 55px;
+  margin-left: -123px;
+  width: 74px;
+  position: absolute;
+  color: #000000;
+  font-weight: 700;
+}
+
+#accessCarByNameForRestore::placeholder {
+  color: #000000;
+  font-weight: 700;
+}
+
+#accessCarByIDForRestore {
+  margin-top: 55px;
+  margin-left: -35px;
+  width: 34px;
+  height: 21px;
+  position: absolute;
+  color: #000000;
+  font-weight: 700;
+}
+
+#accessCarByYearForRestore {
+  margin-top: 55px;
+  margin-left: 7px;
+  width: 90px;
+  height: 21px;
+  position: absolute;
+  color: #000000;
+  font-weight: 700;
+}
+
+#accessCarByMonthForRestore {
+  margin-top: 55px;
+  margin-left: 109px;
+  width: 52px;
+  height: 21px;
+  position: absolute;
+  color: #000000;
+  font-weight: 700;
+}
+
+#accessCarByDayForRestore {
+  margin-top: 55px;
+  margin-left: 173px;
+  width: 52px;
+  height: 21px;
+  position: absolute;
+  color: #000000;
+  font-weight: 700;
+}
+
+#accessCarByHourForRestore {
+  margin-top: 55px;
+  margin-left: 236px;
+  width: 52px;
+  height: 21px;
+  position: absolute;
+  color: #000000;
+  font-weight: 700;
+}
+
+#accessCarByMinForRestore {
+  margin-top: 55px;
+  margin-left: 299px;
+  width: 52px;
+  height: 21px;
+  position: absolute;
+  color: #000000;
+  font-weight: 700;
+}
+
+#accessCarBySecForRestore {
+  margin-top: 55px;
+  margin-left: 364px;
+  width: 52px;
+  height: 21px;
+  position: absolute;
+  color: #000000;
+  font-weight: 700;
+}
+
+#restoreDataBut {
+  margin-top: 55px;
+  margin-left: 587px;
+  width: 100px;
+  position: absolute;
+}
+
+#tab_7 {
+  border: 2px solid black;
+  width: 744px;
+  height: 530px;
+  margin-left: -10px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.dataBaseWorksDBR {
+  width: 130px;
+  height: 72px;
+  margin-top: 0px;
+  margin-left: 1px;
+  /* border: 2px solid black; */
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+}
+
+.dataBaseWorksDBR textarea {
+  width: 79px;
+  margin-left: 20px;
+}
+
+.DBRInteractor {
+  /*border: 2px solid black;*/
+  width: 593px;
+  height: 68px;
+  margin-top: -70px;
+  margin-left: 145px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+}
+
+.appointCarToRoute {
+  width: 147px;
+  height: 116px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+}
+
+.appointCarToRoute textarea {
+  margin-left: 4px;
+  margin-top: 5px;
+}
+
+#selectCarRoute {
+  margin-top: 0px;
+  margin-left: 7px;
+}
+
+#openAppointBlockBut {
+  width: 142px;
+  height: 22px;
+  margin-top: 0px;
+  margin-left: 0px;
+  border-radius: 0px;
+  background-color: blue;
+  color: white;
+}
+
+#appointCarToRouteBut {
+  width: 59px;
+  height: 22px;
+  background-color: blue;
+  color: white;
+}
+
+#cancelCarToRouteBut {
+  width: 63px;
+  height: 22px;
+  background-color: red;
+  color: white;
+}
+
+#openExtractorBlockBut {
+  width: 142px;
+  height: 22px;
+  margin-top: 22px;
+  margin-left: -142px;
+  border-radius: 0px;
+  background-color: green;
+  color: white;
+  position: absolute;
+}
+
+.DBRExtractor {
+  width: 597px;
+  height: 89px;
+  margin-top: -23px;
+  margin-left: -2px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+  position: absolute;
+}
+
+#selectCarRouteExtractor {
+  margin-top: 3px;
+  margin-left: 7px;
+  width: 150px;
+  position: absolute;
+}
+
+#display_DBR_data {
+  margin-top: 35px;
+}
+
+#extractorCarPlate {
+  margin-left: 7px;
+  margin-top: 5px;
+}
+
+#findDataDBRBut {
+  width: 63px;
+  height: 22px;
+  margin-left: -40px;
+  margin-top: 65px;
+  background-color: green;
+  color: white;
+  position: absolute;
+}
+
+#cancelExtractBut {
+  width: 63px;
+  height: 22px;
+  margin-left: 40px;
+  margin-top: 65px;
+  background-color: red;
+  color: white;
+  position: absolute;
+}
+#openEditExtractorData {
+  width: 149px;
+  height: 22px;
+  margin-top: 0px;
+  margin-left: 0px;
+  border-radius: 0px;
+  background-color: red;
+  color: white;
+}
+
+#DBREditBlock {
+  /*border: 2px solid black;*/
+  width: 296px;
+  height: 116px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-top: -23px;
+  margin-left: 296px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+}
+
+#selectCarRouteEditor {
+  width: 83px;
+  height: 22px;
+  margin-top: 0px;
+  margin-left: 0px;
+  position: absolute;
+  background-color: red;
+  color: white;
+}
+
+#deleteDDRData {
+  width: 82px;
+  height: 22px;
+  margin-top: 0px;
+  margin-left: 87px;
+  background-color: red;
+  color: white;
+  position: absolute;
+  border-top-right-radius: 10px;
+}
+
+#DBRInputDeleteCarId {
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 43px;
+  background-color: red;
+  color: white;
+}
+
+#DBRInputDeleteCarId::placeholder {
+  color: white;
+}
+
+#DBRInputDeleteCarPlate {
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 70px;
+  background-color: red;
+  color: white;
+}
+
+#DBRInputDeleteCarPlate::placeholder {
+  color: white;
+}
+
+#EditDDRData {
+  width: 82px;
+  height: 22px;
+  margin-top: 0px;
+  margin-left: 87px;
+  background-color: blue;
+  color: white;
+  position: absolute;
+}
+
+#DBRInputEditCarId {
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 43px;
+  background-color: blue;
+  color: white;
+}
+
+#DBRInputEditCarId::placeholder {
+  color: white;
+}
+
+#DBRInputEditCarPlate {
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 70px;
+  background-color: blue;
+  color: white;
+}
+
+#DBRInputEditCarPlate::placeholder {
+  color: white;
+}
+
+#selectCarRouteEditEditor {
+  width: 83px;
+  height: 22px;
+  margin-top: 0px;
+  margin-left: 0px;
+  position: absolute;
+  background-color: blue;
+  color: white;
+}
+
+#closeDBREditor {
+  margin-top: 60px;
+  margin-left: 143px;
+  background-color: red;
+  color: white;
+  position: absolute;
+}
+
+#DBIParasFindSelect {
+  width: 132px;
+  height: 22px;
+  margin-left: 0px;
+  margin-top: 0px;
+  font-weight: 700;
+
+  position: absolute;
+  background-color: lightgreen;
+  color: black;
+}
+
+#enterFindValue {
+  margin-top: 0px;
+  margin-left: 148px;
+  font-weight: 700;
+  width: 59px;
+  background-color: lightgreen;
+  color: black;
+}
+
+#enterFindValue::placeholder {
+  color: black;
+  font-weight: 700;
+}
+
+#enterUpdateYear {
+  background-color: blue;
+  color: white;
+  width: 63px;
+  margin-left: 0px;
+}
+
+#enterUpdateYear::placeholder {
+  color: white;
+}
+
+#enterUpdateMonth {
+  background-color: blue;
+  color: white;
+  width: 200px;
+  margin-left: 4px;
+  margin-top: 0px;
+  width: 50px;
+  height: 22px;
+  position: absolute;
+}
+
+#enterUpdateMonth::placeholder {
+  color: white;
+}
+
+#enterDeleteYear {
+  background-color: red;
+  color: white;
+  width: 63px;
+  margin-left: 0px;
+}
+
+#enterDeleteYear::placeholder {
+  color: white;
+}
+
+#enterDeleteMonth {
+  background-color: red;
+  color: white;
+  width: 52px;
+  margin-left: 0px;
+}
+
+#enterDeleteMonth::placeholder {
+  color: white;
+}
+
+#enterAccessYear {
+  background-color: lightgreen;
+  color: black;
+  font-weight: 700;
+  width: 63px;
+  margin-left: 0px;
+}
+
+#enterAccessYear::placeholder {
+  color: black;
+  font-weight: 700;
+}
+
+#enterAccessMonth {
+  background-color: lightgreen;
+  color: black;
+  font-weight: 700;
+  width: 52px;
+  margin-left: 0px;
+}
+
+#enterAccessMonth::placeholder {
+  color: black;
+  font-weight: 700;
+}
+
+#carDBInfoEX {
+  width: 150px;
+  height: 67px;
+  margin-top: -111px;
+  margin-left: 336px;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+}
+
+#carDBInfoEX textarea {
+  margin-top: 6px;
+  margin-left: 4px;
+}
+
+#extractorCarID {
+  width: 39px;
+  height: 17px;
+  margin-left: 169px;
+  margin-top: 4px;
+  position: absolute;
+}
+#extractorYear {
+  width: 61px;
+  height: 17px;
+  margin-left: 224px;
+}
+#extractorMonth {
+  width: 61px;
+  height: 17px;
+}
+#extractorDay {
+  width: 49px;
+  height: 17px;
+}
+#extractorHour {
+  width: 59px;
+  height: 17px;
+}
+
+#tab_8 {
+  border: 2px solid black;
+  width: 1313px;
+  height: 563px;
+  margin-left: -10px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+#fullStopCommRightBottomControlMenu {
+  margin-top: 123px;
+  margin-left: 12px;
+  position: absolute;
+}
+
+#mainCross {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  margin-top: 150px;
+  margin-left: 450px;
+  background-color: black;
+}
+
+#rigtBottomLight {
+  width: 80px;
+  height: 41px;
+  margin-top: 156px;
+  margin-left: 118px;
+  position: absolute;
+  border: 2px solid black;
+  background-color: lightgray;
+}
+
+#rigtBottomLightTransmitterBut {
+  border-radius: 70%;
+  /*rotate: 270deg;*/
+  rotate: 90deg;
+}
+
+#rigtBottomLightRecieverBut {
+  border-radius: 50%;
+  rotate: 90deg;
+}
+
+#rigtBottomLightCrosserTurn {
+  width: 20px;
+  height: 20px;
+  margin-top: 155px;
+  margin-left: 95px;
+  position: absolute;
+}
+
+#rigtBottomLightCrosserStraight {
+  width: 20px;
+  height: 20px;
+  margin-top: 155px;
+  margin-left: 95px;
+  position: absolute;
+}
+
+#RightBottomLamp {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-top: 177px;
+  margin-left: 93px;
+  position: absolute;
+  background-color: grey;
+}
+
+#leftBottomLight {
+  width: 41px;
+  height: 80px;
+  margin-top: 117px;
+  margin-left: 0px;
+  position: absolute;
+  border: 2px solid black;
+  background-color: lightgray;
+}
+
+#leftBottomLightCrosserTurn {
+  width: 24px;
+  height: 20px;
+  margin-top: 94px;
+  margin-left: 23px;
+  position: absolute;
+}
+
+#leftBottomLightCrosserStraight {
+  width: 24px;
+  height: 20px;
+  margin-top: 94px;
+  margin-left: 23px;
+  position: absolute;
+}
+
+#LeftBottomLamp {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-top: 92px;
+  margin-left: -1px;
+  position: absolute;
+  background-color: grey;
+}
+
+#leftTopLight {
+  width: 80px;
+  height: 41px;
+  margin-top: -1px;
+  margin-left: 0px;
+  position: absolute;
+  border: 2px solid black;
+  background-color: lightgray;
+}
+
+#leftTopLightCrosserTurn {
+  width: 20px;
+  height: 20px;
+  margin-top: 24px;
+  margin-left: 85px;
+  position: absolute;
+}
+
+#leftTopLightCrosserStraight {
+  width: 20px;
+  height: 20px;
+  margin-top: 24px;
+  margin-left: 85px;
+  position: absolute;
+}
+
+#LeftTopLamp {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-top: 0px;
+  margin-left: 84px;
+  position: absolute;
+  background-color: grey;
+}
+
+#rightTopLight {
+  width: 41px;
+  height: 80px;
+  margin-top: 0px;
+  margin-left: 156px;
+  position: absolute;
+  border: 2px solid black;
+  background-color: lightgray;
+}
+
+#rightTopightCrosserTurn {
+  width: 24px;
+  height: 20px;
+  margin-top: 87px;
+  margin-left: 151px;
+  position: absolute;
+}
+
+#rightTopLightCrosserStraight {
+  width: 24px;
+  height: 20px;
+  margin-top: 87px;
+  margin-left: 151px;
+  position: absolute;
+}
+
+#RightTopLamp {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-top: 85px;
+  margin-left: 177px;
+  position: absolute;
+  background-color: grey;
+}
+
+#RightBottomLampContextMenu {
+  width: 189px;
+  height: 150px;
+  border: 2px solid black;
+  margin-top: 0px;
+  margin-left: 568px;
+  position: absolute;
+}
+
+/*.main{
+  margin-top: 102px;
+  margin-left: 230px;
+  position: absolute;
+    border:2px solid black;
+}*/
+
+#CLOSERightBottomLampContextMenuBut {
+  background-color: red;
+  color: white;
+  margin-left: 167px;
+  margin-top: -1px;
+}
+
+#LeftBottomLampContextMenu {
+  width: 189px;
+  height: 150px;
+  border: 2px solid black;
+  margin-top: -84px;
+  margin-left: 259px;
+  position: absolute;
+}
+
+#CLOSELeftBottomLampContextMenu {
+  background-color: red;
+  color: white;
+  margin-left: 167px;
+  margin-top: -1px;
+}
+
+#LeftTopLampContextMenu {
+  width: 189px;
+  height: 150px;
+  border: 2px solid black;
+  margin-top: -354px;
+  margin-left: 341px;
+  position: absolute;
+}
+
+#CLOSELeftTopLampContextMenu {
+  background-color: red;
+  color: white;
+  margin-left: 167px;
+  margin-top: -1px;
+}
+
+#RightTopLampContextMenu {
+  width: 189px;
+  height: 150px;
+  border: 2px solid black;
+  margin-top: -203px;
+  margin-left: 652px;
+  position: absolute;
+}
+
+#CLOSERightTopLampContextMenu {
+  background-color: red;
+  color: white;
+  margin-left: 167px;
+  margin-top: -1px;
+}
+
+#RightBottomControlMenu {
+  background-color: white;
+  width: 340px;
+  height: 166px;
+  border: 2px solid black;
+  margin-top: -45px;
+  margin-left: 569px;
+  position: absolute;
+}
+
+#CLOSERightBottomControlMenuBut {
+  background-color: red;
+  color: white;
+  margin-left: 317px;
+  margin-top: -1px;
+}
+
+#RightBottomControlMenuTXT {
+  width: 101px;
+  margin-top: 0px;
+  margin-left: 74px;
+}
+
+#LeftBottomControlMenu {
+  background-color: white;
+  width: 340px;
+  height: 166px;
+  border: 2px solid black;
+  margin-top: -84px;
+  margin-left: 151px;
+  position: absolute;
+}
+
+#CLOSELeftBottomControlMenuBut {
+  background-color: red;
+  color: white;
+  margin-left: 317px;
+  margin-top: -1px;
+}
+
+#LeftTopControlMenu {
+  background-color: white;
+  width: 250px;
+  height: 150px;
+  border: 2px solid black;
+  margin-top: -311px;
+  margin-left: 281px;
+  position: absolute;
+}
+
+#CLOSELeftTopControlMenuBut {
+  background-color: red;
+  color: white;
+  margin-left: 227px;
+  margin-top: -1px;
+}
+
+#RightTopControlMenu {
+  background-color: white;
+  width: 250px;
+  height: 150px;
+  border: 2px solid black;
+  margin-top: -273px;
+  margin-left: 608px;
+  position: absolute;
+}
+
+#CLOSERightTopControlMenuBut {
+  background-color: red;
+  color: white;
+  margin-left: 227px;
+  margin-top: -1px;
+  position: absolute;
+}
+
+#OPENstartCommMenuRightBottomControlMenu {
+  margin-top: -14px;
+  margin-left: 8px;
+  position: absolute;
+}
+
+#startCommMenuRightBottomControlMenu {
+  width: 74px;
+  height: 100px;
+  margin-top: -20px;
+  margin-left: 0px;
+  border: 2px solid black;
+  background-color: green;
+}
+
+#start12CommRightBottomControlMenu {
+  margin-top: 32px;
+}
+
+#OPENparametersCommMenuRightBottomControlMenu {
+  margin-top: -14px;
+  margin-left: 78px;
+  position: absolute;
+}
+
+#OPENstopCommMenuRightBottomControlMenu {
+  margin-top: -14px;
+  margin-left: 208px;
+  position: absolute;
+}
+
+#stopCommMenuRightBottomControlMenu {
+  width: 98px;
+  height: 150px;
+  margin-top: -20px;
+  margin-left: 188px;
+  border: 2px solid black;
+  background-color: red;
+}
+
+#stop13CommRightBottomControlMenu {
+  margin-top: 32px;
+  margin-left: 15px;
+}
+
+#ParametersCommMenuRightBottomControlMenu {
+  width: 110px;
+  height: 157px;
+  margin-top: -21px;
+  margin-left: 76px;
+  border: 2px solid black;
+  background-color: orange;
+}
+
+#OPENstartCommLeftBottomControlMenu {
+  margin-top: -15px;
+  position: absolute;
+}
+
+#startCommLeftBottomControlMenu {
+  width: 74px;
+  height: 100px;
+  margin-top: -19px;
+  margin-left: 0px;
+  border: 2px solid black;
+  background-color: green;
+}
+
+#OPENparametersCommMenuLeftBottomControlMenu {
+  margin-top: -14px;
+  margin-left: 78px;
+  position: absolute;
+}
+
+#ParametersCommMenuLeftBottomControlMenu {
+  width: 110px;
+  height: 157px;
+  margin-top: -21px;
+  margin-left: 76px;
+  border: 2px solid black;
+  background-color: orange;
+}
+
+#OPENstopCommMenuLeftBottomControlMenu {
+  margin-top: -14px;
+  margin-left: 208px;
+  position: absolute;
+}
+
+#stopCommMenuLeftBottomControlMenu {
+  width: 98px;
+  height: 150px;
+  margin-top: -20px;
+  margin-left: 188px;
+  border: 2px solid black;
+  background-color: red;
+}
+
+#LeftTopControlMenu {
+  background-color: white;
+  width: 340px;
+  height: 166px;
+  border: 2px solid black;
+  margin-top: -327px;
+  margin-left: 190px;
+  position: absolute;
+}
+
+#CLOSELeftTopControlMenuBut {
+  background-color: red;
+  color: white;
+  margin-left: 317px;
+  margin-top: -1px;
+}
+
+#OPENstartCommLeftTopControlMenu {
+  margin-top: -14px;
+  margin-left: 8px;
+  position: absolute;
+}
+
+#startCommLeftTopControlMenu {
+  width: 74px;
+  height: 100px;
+  margin-top: -20px;
+  margin-left: 0px;
+  border: 2px solid black;
+  background-color: green;
+}
+
+#OPENparametersCommMenuLeftTopControlMenu {
+  margin-top: -14px;
+  margin-left: 78px;
+  position: absolute;
+}
+
+#OPENstopCommMenuLeftTopControlMenu {
+  margin-top: -14px;
+  margin-left: 208px;
+  position: absolute;
+}
+
+#stopCommMenuLeftTopControlMenu {
+  width: 98px;
+  height: 150px;
+  margin-top: -20px;
+  margin-left: 188px;
+  border: 2px solid black;
+  background-color: red;
+}
+
+#ParametersCommMenuLeftTopControlMenu {
+  width: 110px;
+  height: 157px;
+  margin-top: -21px;
+  margin-left: 76px;
+  border: 2px solid black;
+  background-color: orange;
+}
+
+#RightTopControlMenu {
+  background-color: white;
+  width: 340px;
+  height: 166px;
+  border: 2px solid black;
+  margin-top: -288px;
+  margin-left: 607px;
+  position: absolute;
+}
+
+#CLOSERightTopControlMenuBut {
+  background-color: red;
+  color: white;
+  margin-left: 317px;
+  margin-top: -1px;
+}
+
+#OPENstartCommRightTopControlMenu {
+  margin-top: 4px;
+  margin-left: 8px;
+  position: absolute;
+}
+
+#startCommRightTopControlMenu {
+  width: 74px;
+  height: 100px;
+  margin-top: -0px;
+  margin-left: 0px;
+  border: 2px solid black;
+  background-color: green;
+}
+
+#OPENparametersCommMenuRightTopControlMenu {
+  margin-top: 4px;
+  margin-left: 78px;
+  position: absolute;
+}
+
+#ParametersCommMenuRightTopControlMenu {
+  width: 110px;
+  height: 157px;
+  margin-top: -1px;
+  margin-left: 71px;
+  border: 2px solid black;
+  background-color: orange;
+}
+
+#OPENstopCommMenuRightTopControlMenu {
+  margin-top: 4px;
+  margin-left: 208px;
+  position: absolute;
+}
+
+#stopCommMenuRightTopControlMenu {
+  width: 98px;
+  height: 150px;
+  margin-top: 0px;
+  margin-left: 188px;
+  border: 2px solid black;
+  background-color: red;
+}
+
+#CrossingScenariosBlock {
+  width: 268px;
+  height: 339px;
+  border: 2px solid black;
+  margin-top: -344px;
+  margin-left: 1033px;
+  position: absolute;
+  border-top-right-radius: 10px;
+}
+
+#tab_9 {
+  border: 2px solid black;
+  width: 1279px;
+  height: 659px;
+  margin-left: -10px;
+  border-radius: 10px;
+  background-image: url(./Nahodka.jpg);
+}
+
+#crossingControlOperator {
+  width: 170px;
+  height: 170px;
+  border: 2px solid black;
+  margin-top: 295px;
+  margin-left: 593px;
+  background-color: black;
+}
+
+#operatorNahodkaRightBottomSteam {
+  border: 2px solid black;
+  width: 70px;
+  height: 30px;
+  margin-top: 138px;
+  margin-left: 98px;
+  background-color: grey;
+}
+
+#operatorNahodkaRightBottomSteamTransmitterBut {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-top: 3px;
+  margin-left: 6px;
+  position: absolute;
+}
+
+#operatorNahodkaRightBottomSteamTRecieverBut {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-top: 3px;
+  margin-left: 40px;
+  position: absolute;
+}
+
+#operatorNahodkaRightBottomLamp {
+  border: 2px solid black;
+  width: 18px;
+  height: 18px;
+  margin-top: -22px;
+  margin-left: 76px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: red;
+}
+
+#operatorNahodkaRightBottomCrossingStraight {
+  width: 19px;
+  height: 19px;
+  margin-top: -43px;
+  margin-left: 78px;
+  position: absolute;
+}
+
+#operatorNahodkaRightBottomCrossingRight {
+  width: 19px;
+  height: 19px;
+  margin-top: -43px;
+  margin-left: 78px;
+  position: absolute;
+}
+
+#operatorNahodkaLeftBottomSteam {
+  border: 2px solid black;
+  width: 32px;
+  height: 67px;
+  margin-top: -72px;
+  margin-left: -1px;
+  background-color: grey;
+  position: absolute;
+}
+
+#operatorNahodkaLeftBottomSteamTransmitterBut {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-left: 3px;
+  margin-top: 3px;
+}
+
+#operatorNahodkaLeftBottomSteamTRecieverBut {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-left: 3px;
+  margin-top: 11px;
+}
+
+#operatorNahodkaLeftBottomLamp {
+  border: 2px solid black;
+  width: 18px;
+  height: 18px;
+  margin-top: -94px;
+  margin-left: 0px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: red;
+}
+
+#operatorNahodkaLeftBottomCrossingStraight {
+  width: 20px;
+  height: 19px;
+  margin-top: -93px;
+  margin-left: 23px;
+  position: absolute;
+}
+
+#operatorNahodkaLeftBottomCrossingRight {
+  width: 20px;
+  height: 19px;
+  margin-top: -93px;
+  margin-left: 23px;
+  position: absolute;
+}
+
+#operatorNahodkaLeftTopSteam {
+  border: 2px solid black;
+  width: 70px;
+  height: 30px;
+  margin-top: -172px;
+  margin-left: 0px;
+  background-color: grey;
+}
+
+#operatorNahodkaLeftTopSteamRecieverBut {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-left: 4px;
+  margin-top: 2px;
+  position: absolute;
+}
+
+#operatorNahodkaLeftTopSteamTransmitterBut {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-left: 40px;
+  margin-top: 2px;
+  position: absolute;
+}
+
+#operatorNahodkaLeftTopLamp {
+  border: 2px solid black;
+  width: 18px;
+  height: 18px;
+  margin-top: -33px;
+  margin-left: 74px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: red;
+}
+
+#operatorNahodkaLeftTopCrossingStraight {
+  width: 19px;
+  height: 19px;
+  margin-top: -11px;
+  margin-left: 74px;
+  position: absolute;
+}
+
+#operatorNahodkaLeftTopCrossingRight {
+  width: 19px;
+  height: 19px;
+  margin-top: -11px;
+  margin-left: 74px;
+  position: absolute;
+}
+
+#operatorNahodkaRightTopSteam {
+  border: 2px solid black;
+  width: 32px;
+  height: 70px;
+  margin-top: -33px;
+  margin-left: 135px;
+  background-color: grey;
+  position: absolute;
+}
+
+#operatorNahodkaRightTopSteamRecieverBut {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-top: 3px;
+  margin-left: 4px;
+  position: absolute;
+}
+
+#operatorNahodkaRightTopSteamTransmitterBut {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-top: 39px;
+  margin-left: 4px;
+  position: absolute;
+}
+
+#operatorNahodkaRightTopLamp {
+  border: 2px solid black;
+  width: 18px;
+  height: 18px;
+  margin-top: 39px;
+  margin-left: 149px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: red;
+}
+
+#operatorNahodkaRightTopCrossingStraight {
+  width: 22px;
+  height: 19px;
+  margin-top: 40px;
+  margin-left: 127px;
+  position: absolute;
+}
+
+#operatorNahodkaRightTopCrossingRight {
+  width: 22px;
+  height: 19px;
+  margin-top: 40px;
+  margin-left: 127px;
+  position: absolute;
+}
+
+#leftTopTransmitterRecieverBlock {
+  border: 2px solid black;
+  width: 32px;
+  height: 70px;
+  margin-top: -347px;
+  margin-left: 360px;
+  background-color: grey;
+  position: absolute;
+}
+
+#operatorNahodkaleftTopTransmitterRecieverBlockRecieverBut {
+  margin-left: 0px;
+}
+
+#operatorNahodkaleftTopTransmitterRecieverBlockTransmitterBut {
+  margin-left: 0px;
+}
+
+#leftTopTransmitterRecieverCrossingBlock {
+  width: 66px;
+  height: 74px;
+  border: 2px solid black;
+  margin-top: -353px;
+  margin-left: 156px;
+  background-color: black;
+  position: absolute;
+}
+
+#leftTopTransmitterRecieverCrossingTRBlock {
+  border: 2px solid black;
+  width: 32px;
+  height: 70px;
+  margin-top: 0px;
+  margin-left: 31px;
+  background-color: grey;
+  position: absolute;
+}
+
+#operatorNahodkaleftTopTransmitterRecieverCrossingTRBlockkRecieverBut {
+  margin-left: 0px;
+}
+
+#operatorNahodkaleftTopTransmitterRecieverCrossingTRBlockTransmitterBut {
+  margin-left: 0px;
+}
+
+#operatorNahodkaleftTopTransmitterRecieverCrossingBlockCrossingStraight {
+  width: 20px;
+  height: 20px;
+  margin-left: 4px;
+  margin-top: 27px;
+  position: absolute;
+}
+
+#operatorNahodkaleftTopTransmitterRecieverCrossingBlockCrossingRight {
+  width: 20px;
+  height: 20px;
+  margin-left: 4px;
+  margin-top: 27px;
+  position: absolute;
+}
+
+#leftBottomTransmitterRecieverCrossingBlock {
+  width: 65px;
+  height: 74px;
+  border: 2px solid black;
+  margin-top: -247px;
+  margin-left: 0px;
+  background-color: black;
+  position: absolute;
+}
+
+#leftBottomTransmitterRecieverCrossingTRBlock {
+  border: 2px solid black;
+  width: 32px;
+  height: 70px;
+  margin-top: 0px;
+  margin-left: 1px;
+  background-color: grey;
+  position: absolute;
+}
+
+#operatorNahodkaleftBottomTransmitterRecieverCrossingBlockCrossingStraight {
+  width: 20px;
+  height: 20px;
+  margin-top: 27px;
+  margin-left: 41px;
+  position: absolute;
+}
+
+#operatorNahodkaleftBottomTransmitterRecieverCrossingBlockCrossingRight {
+  width: 20px;
+  height: 20px;
+  margin-top: 27px;
+  margin-left: 41px;
+  position: absolute;
+}
+
+#leftBottomTransmitterRecieverBlock {
+  border: 2px solid black;
+  width: 32px;
+  height: 70px;
+  margin-top: -131px;
+  margin-left: 145px;
+  background-color: grey;
+  position: absolute;
+}
+
+#operatorNahodkaRightBottomLampP {
+  color: white;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+#operatorNahodkaOpenToolsBut {
+  margin-top: -463px;
+  margin-left: 1155px;
+  position: absolute;
+}
+
+#operatorNahodkaToolsBlock {
+  width: 350px;
+  height: 350px;
+  margin-top: -468px;
+  margin-left: 928px;
+  border: 2px solid black;
+  position: absolute;
+  border-top-right-radius: 10px;
+  background-color: lightgrey;
+}
+
+#CLOSEoperatorNahodkaToolsBlock {
+  background-color: red;
+  color: white;
+}
+
+#LightsBlock {
+  width: 351px;
+  height: 150px;
+  border: 2px solid black;
+  margin-left: -2px;
+  margin-top: 10px;
+}
+
+#tLight1 {
+  margin-top: 10px;
+  margin-left: 73px;
+  position: absolute;
+  background-color: red;
+  color: white;
+}
+
+#tLight2 {
+  margin-top: 35px;
+  margin-left: 146px;
+  position: absolute;
+  background-color: red;
+  color: white;
+}
+
+#tLight3 {
+  margin-top: 60px;
+  margin-left: 73px;
+  position: absolute;
+  background-color: red;
+  color: white;
+}
+
+#tLight4 {
+  margin-top: 35px;
+  margin-left: 3px;
+  position: absolute;
+  background-color: red;
+  color: white;
+}
+
+#crossesBlock {
+  width: 351px;
+  height: 157px;
+  border: 2px solid black;
+  margin-left: -2px;
+  margin-top: -2px;
+}
+
+#tCross1Str {
+  width: 43px;
+  height: 37px;
+  margin-top: 10px;
+  margin-left: 209px;
+  position: absolute;
+}
+
+#tCross2Str {
+  width: 43px;
+  height: 37px;
+  margin-top: 45px;
+  margin-left: 259px;
+  position: absolute;
+}
+
+#tCross3Str {
+  width: 43px;
+  height: 37px;
+  margin-top: 84px;
+  margin-left: 209px;
+  position: absolute;
+}
+
+#tCross4Str {
+  width: 43px;
+  height: 37px;
+  margin-top: 45px;
+  margin-left: 161px;
+  position: absolute;
+}
+
+#tCross5Str {
+  width: 43px;
+  height: 37px;
+  margin-top: 93px;
+  margin-left: 9px;
+  position: absolute;
+}
+
+#tCross6Str {
+  width: 43px;
+  height: 37px;
+  margin-top: 9px;
+  margin-left: 42px;
+  position: absolute;
+}
+
+#tCross1Rght {
+  width: 43px;
+  height: 37px;
+  margin-top: 10px;
+  margin-left: 209px;
+  position: absolute;
+}
+
+#tCross2Rght {
+  width: 43px;
+  height: 37px;
+  margin-top: 45px;
+  margin-left: 259px;
+  position: absolute;
+}
+
+#tCross3Rght {
+  width: 43px;
+  height: 37px;
+  margin-top: 84px;
+  margin-left: 209px;
+  position: absolute;
+}
+
+#tCross4Rght {
+  width: 43px;
+  height: 37px;
+  margin-top: 45px;
+  margin-left: 161px;
+  position: absolute;
+}
+
+#tCross5Rght {
+  width: 43px;
+  height: 37px;
+  margin-top: 93px;
+  margin-left: 9px;
+  position: absolute;
+}
+
+#tCross6Rght {
+  width: 43px;
+  height: 37px;
+  margin-top: 9px;
+  margin-left: 42px;
+  position: absolute;
+}
+
+#scenesBlock {
+  width: 187px;
+  height: 220px;
+  margin-top: -32px;
+  margin-left: 729px;
+  border: 2px solid black;
+  background-color: lightgray;
+  position: absolute;
+}
+
+#CLOSEscenesBlockBut {
+  background-color: red;
+  color: white;
+  margin-left: 159px;
+  margin-top: 0px;
+}
+
+/*<!--треугольники контур 1-4-->*/
+#TRIANG1-4_1 {
+  margin-top: -276px;
+  margin-left: 580px;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-right: 36px solid grey;
+  border-bottom: 18px solid transparent;
+  position: absolute;
+}
+
+#TRIANG1-4_2 {
+  margin-top: -386px;
+  margin-left: 314px;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-right: 36px solid grey;
+  border-bottom: 18px solid transparent;
+  position: absolute;
+}
+
+#TRIANG1-4_3 {
+  margin-top: -303px;
+  margin-left: -3px;
+  width: 0;
+  height: 0;
+  border-top: 36px solid grey;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  position: absolute;
+}
+
+#TRIANG1-4_4 {
+  margin-top: -83px;
+  margin-left: 344px;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-left: 36px solid grey;
+  border-bottom: 18px solid transparent;
+  position: absolute;
+}
+
+/*<!--треугольники контур 4-1-->*/
+#TRIANG4-1_1 {
+  margin-top: -123px;
+  margin-left: 331px;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-right: 36px solid grey;
+  border-bottom: 18px solid transparent;
+  position: absolute;
+}
+
+#TRIANG4-1_2 {
+  margin-top: -312px;
+  margin-left: 46px;
+  width: 0;
+  height: 0;
+  border-bottom: 36px solid grey;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  position: absolute;
+}
+
+#TRIANG4-1_3 {
+  margin-top: -353px;
+  margin-left: 253px;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-left: 36px solid grey;
+  border-bottom: 18px solid transparent;
+  position: absolute;
+}
+
+#TRIANG4-1_4 {
+  margin-top: -326px;
+  margin-left: 315px;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-left: 36px solid grey;
+  border-bottom: 18px solid transparent;
+  position: absolute;
+}
+
+#TRIANG4-1_5 {
+  margin-top: -249px;
+  margin-left: 538px;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-left: 36px solid grey;
+  border-bottom: 18px solid transparent;
+  position: absolute;
+}
+
+/*<!--треугольники контур 2-2-->*/
+#TRIANG2-2_1D {
+  margin-top: -84px;
+  margin-left: 827px;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-left: 36px solid grey;
+  border-bottom: 18px solid transparent;
+  position: absolute;
+}
+
+#TRIANG2-2_2U {
+  margin-top: -123px;
+  margin-left: 822px;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-right: 36px solid grey;
+  border-bottom: 18px solid transparent;
+  position: absolute;
+}
+
+/*<!--треугольники контур 3-3-->*/
+#TRIANG3-3_1L {
+  margin-top: 25px;
+  margin-left: 649px;
+  width: 0;
+  height: 0;
+  border-top: 36px solid grey;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  position: absolute;
+}
+
+#TRIANG3-3_2R {
+  margin-top: 33px;
+  margin-left: 676px;
+  width: 0;
+  height: 0;
+  border-bottom: 36px solid grey;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  position: absolute;
+}
+
+#TRIANG3-3_2RInfo {
+  border: 2px solid black;
+  width: 150px;
+  height: 100px;
+  margin-top: 0px;
+  margin-left: 693px;
+  position: absolute;
+  background: white;
+}
+
+#CLOSETRIANG3-3_2RInfo {
+  background: red;
+  color: white;
+  margin-top: 1px;
+  margin-left: 125px;
+}
+
+#TRIANG3-3_1LInfo {
+  border: 2px solid black;
+  width: 150px;
+  height: 100px;
+  margin-top: 0px;
+  margin-left: 514px;
+  position: absolute;
+  background: white;
+}
+
+#CLOSETRIANG3-3_1LInfo {
+  background: red;
+  color: white;
+  margin-top: 1px;
+  margin-left: 125px;
+}
+
+#TRIANG2-2_2UInfo {
+  border: 2px solid black;
+  width: 150px;
+  height: 100px;
+  margin-top: -208px;
+  margin-left: 765px;
+  position: absolute;
+  background: white;
+}
+
+#CLOSETRIANG2-2_2UInfo {
+  background: red;
+  color: white;
+  margin-top: 1px;
+  margin-left: 125px;
+}
+
+#TRIANG2-2_1DInfo {
+  border: 2px solid black;
+  width: 150px;
+  height: 100px;
+  margin-top: -66px;
+  margin-left: 765px;
+  position: absolute;
+  background: white;
+}
+
+#CLOSETRIANG2-2_1DInfo {
+  background: red;
+  color: white;
+  margin-top: 1px;
+  margin-left: 125px;
+}
+
+#TRIANG1-4_1Info {
+  border: 2px solid black;
+  width: 150px;
+  height: 100px;
+  margin-top: -362px;
+  margin-left: 490px;
+  position: absolute;
+  background: white;
+}
+
+#CLOSETRIANG1-4_1Info {
+  background: red;
+  color: white;
+  margin-top: 1px;
+  margin-left: 125px;
+}
+
+#TRIANG1-4_2Info {
+  border: 2px solid black;
+  width: 150px;
+  height: 100px;
+  margin-top: -467px;
+  margin-left: 197px;
+  position: absolute;
+  background: white;
+}
+
+#CLOSETRIANG1-4_2Info {
+  background: red;
+  color: white;
+  margin-top: 1px;
+  margin-left: 125px;
+}
+
+#TRIANG1-4_3Info {
+  border: 2px solid black;
+  width: 150px;
+  height: 100px;
+  margin-top: -412px;
+  margin-left: -1px;
+  position: absolute;
+  background: white;
+}
+
+#CLOSETRIANG1-4_3Info {
+  background: red;
+  color: white;
+  margin-top: 1px;
+  margin-left: 125px;
+}
+
+#TRIANG1-4_4Info {
+  border: 2px solid black;
+  width: 150px;
+  height: 100px;
+  margin-top: -66px;
+  margin-left: 282px;
+  position: absolute;
+  background: white;
+}
+
+#CLOSETRIANG1-4_4Info {
+  background: red;
+  color: white;
+  margin-top: 1px;
+  margin-left: 125px;
+}
+
+#TRIANG4-1_1Info {
+  border: 2px solid black;
+  width: 150px;
+  height: 100px;
+  margin-top: -208px;
+  margin-left: 282px;
+  position: absolute;
+  background: white;
+}
+
+#CLOSETRIANG4-1_1Info {
+  background: red;
+  color: white;
+  margin-top: 1px;
+  margin-left: 125px;
+}
+
+#TRIANG4-1_2Info {
+  border: 2px solid black;
+  width: 150px;
+  height: 100px;
+  margin-top: -276px;
+  margin-left: 68px;
+  position: absolute;
+  background: white;
+}
+
+#CLOSETRIANG4-1_2Info {
+  background: red;
+  color: white;
+  margin-top: 1px;
+  margin-left: 125px;
+}
+
+#TRIANG4-1_3Info {
+  border: 2px solid black;
+  width: 133px;
+  height: 100px;
+  margin-top: -438px;
+  margin-left: 224px;
+  position: absolute;
+  background: white;
+}
+
+#CLOSETRIANG4-1_3Info {
+  background: red;
+  color: white;
+  margin-top: 1px;
+  margin-left: 108px;
+}
+
+#TRIANG4-1_4Info {
+  border: 2px solid black;
+  width: 133px;
+  height: 100px;
+  margin-top: -308px;
+  margin-left: 224px;
+  position: absolute;
+  background: white;
+}
+
+#CLOSETRIANG4-1_4Info {
+  background: red;
+  color: white;
+  margin-top: 1px;
+  margin-left: 108px;
+}
+
+#TRIANG4-1_5Info {
+  border: 2px solid black;
+  width: 150px;
+  height: 100px;
+  margin-top: -232px;
+  margin-left: 430px;
+  position: absolute;
+  background: white;
+}
+
+#CLOSETRIANG4-1_5Info {
+  background: red;
+  color: white;
+  margin-top: 1px;
+  margin-left: 125px;
+}
+
+#tab_10 {
+  border: 2px solid black;
+  width: 1313px;
+  height: 800px;
+  margin-left: -10px;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+#commTXTBlock {
+  width: 250px;
+  height: 767px;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+  /*position: absolute;*/
+}
+
+#loadScriptPartsBut{
+  margin-left: 196px;
+  margin-top: -758px;
+  position: absolute;
+}
+
+#TXTAreas{
+  margin-top: 42px;
+  width: 250px;
+  height: 721px;
+  /*border: 2px solid black;*/
+  position: absolute;
+}
+
+
+
+#TXTAreas textarea{
+  width: 174px;
+  height: 17px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+/*#commTXTBlock textarea {
+  width: 174px;
+  height: 17px;
+  margin-top: 5px;
+  margin-left: 5px;
+}*/
+
+#TXTAreas button {
+  margin-top: 5px;
+  margin-left: 5px;
+  position: absolute;
+}
+
+#notification {
+  width: 200px;
+  height: 105px;
+  margin-top: -348px;
+  margin-left: 294px;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: lightgreen;
+}
+
+#modalSetTimer {
+  width: 111px;
+  height: 21px;
+  margin-top: -423px;
+  margin-left: 290px;
+  position: absolute;
+  background-color: white;
+}
+
+#timerValueTXT{
+  width: 50px;
+}
+
+#CLOSEmodalSetTimer{
+  width: 24px;
+  height: 23px;
+  margin-top: -1px;
+  margin-left: 33px;
+  border-radius: 50%;
+  position: absolute;
+  background: red;
+  color: white;
+}
+
+#timerValueTXT::placeholder {
+  color: black;
+}
+
+#setTimerTXT {
+  margin-left: 37px;
+  margin-top: 73px;
+  position: absolute;
+  width: 64px;
+}
+
+#notificationScriptName {
+  margin-top: -7px;
+  margin-left: 6px;
+  width: 183px;
+}
+
+#notificationScriptNameCancel {
+  margin-left: -113px;
+  margin-top: 22px;
+  position: absolute;
+}
+
+#timertext {
+  margin-top: 36px;
+  margin-left: 3px;
+  position: absolute;
+}
+
+#notificationScriptOK {
+  margin-left: -35px;
+  margin-top: 22px;
+  position: absolute;
+}
+
+#createScriptBlock {
+  width: 250px;
+  height: 765px;
+  margin-top: -766px;
+  margin-left: 271px;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+}
+
+/*#createScriptBlock textarea {
+  margin-left: 5px;
+  margin-top: 10px;
+}*/
+
+#OPENcreateScriptBlock {
+  margin-top: -758px;
+  margin-left: 274px;
+  position: absolute;
+}
+
+#SAVEcreateScriptBlockPart_1 {
+  margin-top: 31px;
+  margin-left: 7px;
+  position: absolute;
+}
+
+#ScriptNames {
+  width: 113px;
+  margin-top: 59px;
+  margin-left: -113px;
+  position: absolute;
+}
+
+#createScriptBlockTimerTXT{
+  margin-top: 151px;
+  margin-left: 115px;
+  position: absolute;
+}
+
+#RUNScriptBut {
+  width: 79px;
+  margin-top: 57px;
+  margin-left: 6px;
+  position: absolute;
+  /* border-bottom-right-radius: 10px; */
+}
+
+#addScriptToQBut {
+  width: 104px;
+  margin-top: 108px;
+  margin-left: -113px;
+  position: absolute;
+  /* border-bottom-left-radius: 10px; */
+}
+
+#CLOSEcreateScriptBlock {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  margin-top: 3px;
+  margin-left: 219px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+}
+
+#scriptQueue {
+  margin-left: 542px;
+  margin-top: -766px;
+  width: 171px;
+  height: 500px;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background-color: #c8e6c9;
+}
+
+#scriptQueue textarea {
+  margin-left: 24px;
+  margin-top: -27px;
+  position: absolute;
+}
+
+.monitorMainCheckSMegaTest {
+  background-color: #c8e6c9;
+  width: 569px;
+  height: 700px;
+  margin-top: -768px;
+  margin-left: 738px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  position: absolute;
+}
+
+#TxtRecievedSMegaTest{
+  width: 549px;
+  height: 650px;
+  margin-top: 35px;
+  margin-left: -550px;
+  position: absolute;
+}
+
+#megaTestCommsSequenceSave {
+  margin-left: 92px;
+  margin-top: -758px;
+  position: absolute;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  background: blue;
+  color: white;
+}
+
+#notificationScriptCommSeqenceNameChoice {
+  width: 166px;
+  margin-left: 10px;
+  margin-top: 10px;
+  position: absolute;
+}
+
+#notificationCommSequenceRun {
+  margin-left: 135px;
+  margin-top: 33px;
+  position: absolute;
+}
+
+#megaTestCommSequenceRunGet {
+  margin-left: 136px;
+  margin-top: -758px;
+  position: absolute;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  background: green;
+  color: white;
+}
+
+#notificationCommSeqScriptOK {
+  margin-left: -35px;
+  margin-top: 22px;
+  position: absolute;
+}
+
+#MPXVisualBlock{
+  background-color: #c8e6c9;
+  width: 569px;
+  height: 289px;
+  margin-top: -466px;
+  margin-left: 738px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  position: absolute;
+}
+
+#commandSelectMegaTest{
+  margin-top: 218px;
+  margin-left: -523px;
+  position: absolute;
+}
+
+#CLEARScriptPartsBut{
+  margin-left: 14px;
+  margin-top: -758px;
+  position: absolute;
+}
+
+#CLEARTxtcreateScriptBlock{
+  width: 46px;
+  margin-top: -259px;
+  margin-left: 16px;
+  position: absolute;
+
+}
+
+#CLOSEnotificationSaveCS{
+  margin-top: 4px;
+  margin-left: -21px;
+  background: red;
+  color: white;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#notificationForLoadCS{
+  border: 2px solid black;
+  width: 200px;
+  height: 100px;
+  margin-top: -500px;
+  margin-left: 150px;
+  position: absolute;
+  background-color: white;
+}
+
+#notificationSaveCS{
+  border: 2px solid black;
+  width: 200px;
+  height: 100px;
+  margin-top: -720px;
+  margin-left: 150px;
+  position: absolute;
+  background-color: white;
+}
+
+#SAVEnotificationSaveCS{
+  margin-left: 92px;
+  margin-top: 74px;
+  position: absolute;
+}
+
+#notificationScriptNameSaveCS{
+  margin-top: 42px;
+  margin-left: 5px;
+  width: 183px;
+  position: absolute;
+}
+
+#CANCELnotificationSaveCS{
+  border-radius: 5px;
+    margin-left: 5px;
+    margin-top: 74px;
+}
+
+#h2{
+  position: absolute;
+  margin-top: 4px;
+  margin-left: 80px;
+}
+
+#notificationScriptNameRunPrintCS{
+  border: 2px solid black;
+  width: 200px;
+  height: 100px;
+  margin-top: -720px;
+  margin-left: 150px;
+  position: absolute;
+  background-color: white;
+}
+
+#SelectnotificationScriptNameRunPrintCSSelect{
+  margin-top: 35px;
+  margin-left: 6px;
+  width: 182px;
+  position: absolute;
+}
+
+/*#notificationScriptNameRunPrintCS button{
+  margin-top: 68px;
+  margin-left: 11px;
+  margin-right: 5px;
+}*/
+
+#CANCELnotificationScriptNameRunPrintCS{
+  width: 24px;
+  height: 24px;
+  margin-top: 2px;
+  margin-left: 174px;
+  position: absolute;
+  border-radius:50%;
+  background:red;
+  color:white;
+}
+#PRINTnotificationScriptNameRunPrintCS{
+  width: 84px;
+  height: 38px;
+  margin-top: 60px;
+  margin-left: 112px;
+  position: absolute;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  background: green;
+  color: white;
+}
+#RUNnotificationScriptNameRunPrintCS{
+  width: 41px;
+  height: 24px;
+  margin-top: 73px;
+  margin-left: 157px;
+  position: absolute;
+  border-bottom-left-radius:0px;
+  border-top-left-radius:0px;
+  background:blue;
+  color:white;
+}
+#h3{
+  margin-top: 76px;
+  margin-left: 0px;
+  position: absolute;
+
+}
+
+#createScriptBlockPart_1TXT, 
+#createScriptBlockPart_2TXT, 
+#createScriptBlockPart_3TXT, 
+#createScriptBlockPart_4TXT, 
+#createScriptBlockPart_5TXT, 
+#createScriptBlockPart_6TXT,
+#createScriptBlockPart_7TXT, 
+#createScriptBlockPart_8TXT, 
+#createScriptBlockPart_9TXT, 
+#createScriptBlockPart_10TXT, 
+#createScriptBlockPart_11TXT, 
+#createScriptBlockPart_12TXT{
+  margin-top: 0px;
+}
+
+#createScriptBlockPart_1TXTTimer, 
+#createScriptBlockPart_2TXTTimer, 
+#createScriptBlockPart_3TXTTimer, 
+#createScriptBlockPart_4TXTTimer, 
+#createScriptBlockPart_5TXTTimer, 
+#createScriptBlockPart_6TXTTimer,
+#createScriptBlockPart_7TXTTimer, 
+#createScriptBlockPart_8TXTTimer, 
+#createScriptBlockPart_9TXTTimer, 
+#createScriptBlockPart_10TXTTimer, 
+#createScriptBlockPart_11TXTTimer, 
+#createScriptBlockPart_12TXTTimer{
+  margin-top: -1px;
+  margin-left: 84px;
+}
+
+#tab_11{
+  border: 2px solid black;
+  width: 744px;
+  /* width: min-content + 0px;*/
+  height: 530px;
+  margin-left: -10px;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+#TESTclearOutputBut{
+  position: absolute;
+  margin-top: 218px;
+  margin-left: -508px;
+}
+
+#closeSerialConnectionBut{
+  position: absolute;
+  width: 108px;
+  height: 38px;
+  margin-top: -7px;
+  margin-left: 3px;
+  background:red;
+  color: white;
+}
